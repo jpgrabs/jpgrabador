@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Android Studio Tutorial: How to make a custom curve button">
+    <meta name="author" content="John Paul Grabador">
+    <meta name="robots" content="index,follow">
+    <link href="images/proj/pro_pic3.png" rel="icon">
+    <link href="images/proj/pro_pic3.png" rel="apple-touch-icon">
+    <title>Tutorial</title>
+    <link href="old/css/bootstrap.min copy.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap-glyphicons.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta property="og:url" content="{{url()->current()}}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/files/android-tuts-curve-button.png">
+    <meta property="og:site_name" content="Android Studio Tutorial: How to make a custom curve button" >
+    <!-- <meta property="fb:app_id" content="2573568509320915"> -->
+    <meta property="og:image:width" content="1200" >
+    <meta property="og:image:height" content="630" >
+    <meta property="og:title" content="Android Studio Tutorial: How to make a custom curve button" >
+  </head>
+
+  <body class="index" id="page-top">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+              <a class="navbar-brand" href="#page-top">JPGrabador</a>
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                     <a class="nav-link" href="../tutorial-main.html">Tutorials</a>
+                   </li>
+                </ul>
+              </div>
+        </nav>
+        <!-- navbar end -->
+    <section>
+      <div class="container">
+        <h3 class="ml-2">Android Studio Tutorial: How to make a custom curve button</h3>
+        <h8 class="ml-2">How to make a custom curve button using Kotlin Programming Language</h8>
+        <p class="ml-2"><small><i>Published: June 10, 2020</i></small></p>
+        <div class="row">
+          <div class="col-lg-10">
+            <img class="img-thumbnails ml-2 mb-2" src="images/files/android-tuts-curve-button.png" height="400px" width="100%"></img>
+<br><br><br><p> This simple Android Studio Tutorial Series on How to make custom curve button. Just follow and copy the code below.</p><br>
+<h5><b>Create a custom layout in drawable folder</b></h5>
+<p> app>src>main>res>drawable>btn_primary.xml</p>
+<h5><b>btn_primary.xml</b></h5>
+
+<pre class="codeprint"><div class="col">
+  <span class="tc-yellow"><<i>?</i></span>xml version<span class="tc-green">="1.0"</span> encoding<span class="tc-green">="utf-8"</span><span class="tc-yellow">?></span>
+  <span class="tc-yellow"><i><</i>shape</span> xmlns:<span class="tc-purple">android</span> = <span class="tc-green">"http://schemas.android.com/apk/res/android"</span>
+      <span class="tc-purple">android</span>:shape<span class="tc-green">="rectangle"</span><span class="tc-yellow">></span>
+      <span class="tc-yellow"><i><</i>corners</span> <span class="tc-purple">android</span>:radius<span class="tc-green">="24dp"</span><span class="tc-yellow">/></span>
+      <span class="tc-yellow"><i><</i>solid</span> <span class="tc-purple">android</span>:color<span class="tc-green">="#905170CD"</span><span class="tc-yellow">/></span>
+  <span class="tc-yellow"><<i>/</i>shape></span>
+</div></pre>
+<br>
+<p> You now have custom layout that can be used on any background widget layout like button on the example below </p>
+<br>
+<h5><b>activity_main.xml</b></h5>
+<pre class="codeprint"><div class="col">
+<span class="tc-yellow"><<i>?</i></span>xml version<span class="tc-green">="1.0"</span> encoding<span class="tc-green">="utf-8"</span><span class="tc-yellow">?></span>
+<span class="tc-yellow"><i><</i>FrameLayout</span> xmlns:<span class="tc-purple ">android</span> = <span class="tc-green">"http://schemas.android.com/apk/res/android"</span>
+    xmlns:<span class="tc-purple">app</span>=<span class="tc-green">"http://schemas.android.com/apk/res-auto"</span>
+    xmlns:<span class="tc-purple">tools</span>=<span class="tc-green">"http://schemas.android.com/tools"</span>
+    <span class="purple-orange">android</span>:layout_width<span class="tc-green">="match_parent"</span>
+    <span class="tc-purple">android</span>:layout_heigh<span class="tc-green">="match_parent"</span>
+    <span class="tc-purple">tools</span>:context<span class="tc-green">=".MainActivity"</span><span class="tc-yellow">></span>
+    <span class="tc-yellow"><i><</i>TextView</span>
+        <span class="tc-purple">android</span>:layout_width<span class="tc-green">="wrap_content"</span>
+        <span class="tc-purple">android</span>:layout_width<span class="tc-green">="wrap_content"</span>
+        <span class="tc-purple">android</span>:text<span class="tc-green">="Hello World this is Page 1!"</span>
+        <span class="tc-purple">android</span>:textSize<span class="tc-green">="15dp"</span>
+        <span class="tc-purple">android</span>:visibility<span class="tc-green">="gone"</span>
+        <span class="tc-purple">android</span>:layout_gravity<span class="tc-green">="center"</span><span class="tc-yellow">/></span>
+    <span class="tc-yellow"><i><</i>de.hdodenhof.circleimageview.CircleImageView</span>
+        <span class="tc-purple">android</span>:id<span class="tc-green">="@+id/button"</span>
+        <span class="tc-purple">android</span>:layout_width<span class="tc-green">="wrap_content"</span>
+        <span class="tc-purple">android</span>:layout_width<span class="tc-green">="wrap_content"</span>
+        <span class="tc-purple">android</span>:layout_gravity<span class="tc-green">="center"</span>
+        <span class="tc-purple">android</span>:src<span class="tc-green">="@drawable/img_logo_admin_grabs_media"</span></span><span class="tc-yellow">/></span>
+    <span class="tc-yellow"><i><</i>Button</span>
+        <span class="tc-purple">android</span>:id<span class="tc-green">="@+id/button"</span>
+        <span class="tc-purple">android</span>:layout_width<span class="tc-green">="match_parent"</span>
+        <span class="tc-purple">android</span>:layout_width<span class="tc-green">="match_parent"</span>
+        <span class="tc-purple">android</span>:background<span class="tc-green">="@drawable/btn_primary"</span>
+        <span class="tc-purple">android</span>:textColor<span class="tc-green">="#ffffff"</span>
+        <span class="tc-purple">android</span>:layout_gravity<span class="tc-green">="bottom"</span>
+        <span class="tc-purple">android</span>:text<span class="tc-green">="Next Button"</span>
+        <span class="tc-purple">android</span>:layout_margin<span class="tc-green">="12dp"</span></span><span class="tc-yellow">/></span>
+<span class="tc-yellow"><<i>/</i>FrameLayout></span>
+</div></pre>
+
+
+
+            <p>You can Download the source on GitHub and Follow the full video tutorial on YouTube. Don't forget to subscribe to the YouTube channel for more updates.</p>
+            <br>
+            <a class="btn-link ml-2" style ="text-decoration: none;"href="https://bit.ly/3g7Yx79" target ="blank">
+            <i class="fa fa-fw fa-github"> </i><small> Download at GitHub</small></a>
+            <a class="btn-link ml-2" style ="text-decoration: none;"href="https://bit.ly/3dS58Rp" target ="blank">
+            <i class="fa fa-fw fa-youtube"> </i><small> Visit on YouTube</small></a>
+            <br><br>
+            <p>I will post again on this site and upload on YouTube about my next tutorial. Stay tune up and follow my other social media platforms for more updates.</p>
+            <br><br>
+          </div>
+          <div class="col-lg-2">
+            <p><b>Random Topic</b></p>
+                <a style ="text-decoration: none; color: black;"href="tutorial/android-splash-tutorial">
+                <div class="left-item pl-2 mt-2">
+                    <img class="img-thumbnails pr-3" src="images/files/android-tuts-splash.png" height="100%" width="100%"></img>
+                    <b>Android Splash Tutorial</b><br>
+                    <small><i>May 17, 2020</i></small>
+                </div>
+                </a>
+                <a style ="text-decoration: none; color: black;"href="tutorial/android-tutorial-button-click">
+                <div class="left-item pl-2 mt-2">
+                    <img class="img-thumbnails pr-3" src="images/files/android-tuts-button-click.png" height="100%" width="100%"></img>
+                    <b>Android Button click Tutorial</b><br>
+                    <small><i>May 21, 2020</i></small>
+                </div>
+                </a>
+                <a style ="text-decoration: none; color: black;"href="tutorial/android-tutorial-how-to-make-circle-image">
+                <div class="left-item pl-2 mt-2">
+                    <img class="img-thumbnails pr-3" src="images/files/android-tuts-circle-image.png" height="100%" width="100%"></img>
+                    <b>How to make Circle Image</b><br>
+                    <small><i>June 07, 2020</i></small>
+                </div>
+                </a>
+
+
+          </div>
+          </div>
+      </div>
+    </section>
+ <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+          <div class="container">
+            <div class="row">
+                    <div class="col col-lg-4">
+                        <h4>Location:</h4>
+                        <p>Caloocan City,Philippines</p>
+                        <a class="white-link" href="../privacy-policy.html">Privacy Policy</a> | <a class="white-link" href="../terms-and-conditions.html">Terms & Condition</a></br></br>
+                        <h4>Contact Me Via:</h4>
+                        <p>Email : <b>jpgrabador@gmail.com</b>
+                        </p>
+                        <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://www.paypal.me/jpgrabs" target ="blank">
+                          <i class="fa fa-fw fa-paypal"> </i><small> Donate with PayPal</small>
+                        </a>
+                    </div>
+
+                  <div class="col col-lg-8">
+                    <h4>Social Media Account</h4>
+                    <div class="col ml-4">
+                          <div class="row">
+                                <a class="footer-social-media mr-2" style ="text-decoration: none;"href="https://web.facebook.com/admingrabs" target ="blank">
+                                  <i class="fa fa-fw fa-facebook"> </i><small> Facebook</small>
+                                </a>
+                                <a class="footer-social-media mr-2" style ="text-decoration: none;"href="https://twitter.com/DmnGrabs" target ="blank">
+                                  <i class="fa fa-fw fa-twitter"> </i><small> Twitter</small>
+                                </a>
+                                <a class="footer-social-media mr-2" style ="text-decoration: none;"href="https://www.linkedin.com/in/john-paul-grabador-129816b9?trk" target ="blank">
+                                  <i class="fa fa-fw fa-linkedin"> </i><small> Linkedin</small>
+                                </a>
+                                <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://www.instagram.com/admingrabs/" target ="blank">
+                                  <i class="fa fa-fw fa-instagram"> </i><small> Instagram</small>
+                                </a>
+                          </div>
+                          <div class="row">
+                                <a class="footer-social-media mr-2" style ="text-decoration: none;"href="https://www.linkedin.com/in/john-paul-grabador-129816b9?trk" target ="blank">
+                                  <i class="fa fa-fw fa-linkedin"> </i><small> Linkedin</small>
+                                </a>
+                                <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://www.instagram.com/admingrabs/" target ="blank">
+                                  <i class="fa fa-fw fa-instagram"> </i><small> Instagram</small>
+                                </a>
+                                <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://github.com/jpgrabs" target ="blank">
+                                  <i class="fa fa-fw fa-github"> </i><small> Github</small>
+                                </a>
+                                <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://www.youtube.com/channel/UCDI8K9MSU1HwlFVR1p2tQgQ" target ="blank">
+                                  <i class="fa fa-fw fa-youtube"> </i><small> Youtube</small>
+                                </a>
+                          </div>
+                          <div class="row">
+                                <a class="footer-social-media mr-2" style ="text-decoration: none;"href="https://t.me/agcryptocommunity" target ="blank">
+                                  <i class="fa fa-fw fa-telegram"> </i><small> Telegram</small>
+                                </a>
+                                <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://discord.gg/ZpMYcUJXHx" target ="blank">
+                                  <i class="fa fa-fw fa-discord"> </i><small> Discord</small>
+                                </a>
+                          </div>
+
+                    </div>
+                  </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="footer-below">
+                Copyright &copy; John Paul Grabador 2017 - 2020
+        </div>
+        <!-- SCIPTS -->
+        <script src="./js/jquery/jquery.min.js"></script>
+        <script src="./js/popper/popper.min.js"></script>
+        <script src="./js/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="./js/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Contact Form JavaScript -->
+        <script src="./js/jqBootstrapValidation.js"></script>
+        <!-- <script src="{{url('/old/js/contact_me.js')}}"></script> -->
+        <!-- Custom scripts for this template -->
+        <script src="./js/freelancer.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <div class="scroll-top d-lg-none">
+            <a class="btn btn-primary page-scroll" href="#page-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </footer>
+
+
+  </body>
+
+</html>
