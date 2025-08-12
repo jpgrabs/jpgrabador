@@ -1,77 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Split Personality Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- <link rel="stylesheet" href="aos.css" /> -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP Grabs Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="split-container">
 
-    <!-- Left Panel - Tech -->
-    <section class="left-panel">
-      <div class="content" data-aos="fade-right">
-        <h1>Developer</h1>
-        <p>I create efficient and scalable applications. Here are some of my projects and work experience.</p>
-
-        <div class="project-list">
-          <div class="project-card">
-            <img src="images/project1-thumb.jpg" alt="Project 1">
-            <div>
-              <h3>Inventory Management System</h3>
-              <p>Built with Kotlin and Firebase for real-time stock tracking.</p>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="spacer"></div> <!-- pushes title/hamburger to right -->
+        <div class="nav-right">
+            <h1 class="nav-title">JP Grabs</h1>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-          </div>
-          <div class="project-card">
-            <img src="images/project2-thumb.jpg" alt="Project 2">
-            <div>
-              <h3>Portfolio Website</h3>
-              <p>Responsive HTML, CSS, JS site with animations.</p>
-            </div>
-          </div>
         </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#tech-projects">Tech Projects</a></li>
+            <li><a href="#creative-projects">Creative Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-        <div class="experience">
-          <h2>Experience</h2>
-          <ul>
-            <li><strong>Software Developer</strong> - ABC Tech (2023–2024)</li>
-            <li><strong>Freelance Web Dev</strong> - Various Clients (2021–2023)</li>
-          </ul>
+
+    <!-- Banner -->
+    <section id="banner" class="dark-section">
+        <div class="banner-content fade-in">
+            <h1>Hi, I'm JP Grabs</h1>
+            <p>Programmer</p>
+            <p>Social Media Manager</p>
+            <p>Creative Designer</p>
         </div>
-      </div>
     </section>
 
-    <!-- Right Panel - Creative -->
-    <section class="right-panel">
-      <div class="content" data-aos="fade-left">
-        <h1>Creative</h1>
-        <p>Social Media Manager & Graphic Designer. Canva specialist with a flair for brand storytelling.</p>
+    <!-- About -->
+    <section id="about" class="light-section fade-in">
+        <h2>About Me</h2>
+        <p>
+            I’m a tech-savvy professional with a passion for combining code, creativity, and strategy. 
+            My background includes programming, managing social media campaigns, and crafting designs that connect.
+        </p>
+    </section>
 
+    <!-- Split Personality -->
+    <section id="split" class="dark-section fade-in">
+        <div class="split-container">
+            <div class="split left">
+                <h3>Tech Side</h3>
+                <p>Clean, efficient code and logical problem-solving.</p>
+            </div>
+            <div class="split right">
+                <h3>Creative Side</h3>
+                <p>Visual storytelling, branding, and design aesthetics.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Tech Projects -->
+<section id="tech-projects" class="light-section fade-in">
+    <h2>Tech Projects</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300" alt="Project 1">
+            <p>Project 1 Title</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300" alt="Project 2">
+            <p>Project 2 Title</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300" alt="Project 3">
+            <p>Project 3 Title</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300" alt="Project 4">
+            <p>Project 4 Title</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300" alt="Project 5">
+            <p>Project 5 Title</p>
+        </div>
+        <!-- Continue for all other images -->
+    </div>
+    <a href="tech-projects.html" class="view-more">View More...</a>
+</section>
+
+    <!-- Creative Projects -->
+    <section id="creative-projects" class="dark-section fade-in">
+        <h2>SMM + Creative Projects</h2>
         <div class="gallery">
-          <img src="images/creative1.jpg" alt="Creative Work 1">
-          <img src="images/creative2.jpg" alt="Creative Work 2">
-          <img src="images/creative3.jpg" alt="Creative Work 3">
-          <img src="images/creative4.jpg" alt="Creative Work 4">
+       <div class="gallery-item-dark">
+            <img src="https://via.placeholder.com/300" alt="Project 1">
+            <p>Project 1 Title</p>
         </div>
-      </div>
+        <div class="gallery-item-dark">
+            <img src="https://via.placeholder.com/300" alt="Project 2">
+            <p>Project 2 Title</p>
+        </div>
+        <div class="gallery-item-dark">
+            <img src="https://via.placeholder.com/300" alt="Project 3">
+            <p>Project 3 Title</p>
+        </div>
+        <div class="gallery-item-dark">
+            <img src="https://via.placeholder.com/300" alt="Project 4">
+            <p>Project 4 Title</p>
+        </div>
+        <div class="gallery-item-dark">
+            <img src="https://via.placeholder.com/300" alt="Project 5">
+            <p>Project 5 Title</p>
+        </div>
+        <!-- Continue for all other images -->
+        </div>
+        <a href="creative-projects.html" class="view-more">View More...</a>
     </section>
 
-  </div>
+    <!-- Job Experience -->
+    <section class="light-section fade-in">
+        <h2>Job Tech Experience</h2>
+        <p>Worked on various enterprise-level projects, mobile applications, and automation scripts.</p>
+    </section>
 
-  <!-- Lightbox -->
-  <div id="lightbox">
-    <span id="close">&times;</span>
-    <img id="lightbox-img" src="" alt="">
-  </div>
+    <!-- SMM & Creative Experience -->
+    <section class="dark-section fade-in">
+        <h2>SMM + Creative Experience</h2>
+        <p>Managed social media strategies, created ad campaigns, and produced creative content using Canva.</p>
+    </section>
 
-  <!-- <script src="aos.js"></script> -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/script.js"></script>
-  <script>
-    AOS.init({ duration: 800 });
-  </script>
+    <!-- Footer -->
+    <footer id="contact" class="light-section fade-in">
+        <div class="footer-container">
+            <div>
+                <h4>Email</h4>
+                <p>contact@jpgrabs.com</p>
+            </div>
+            <div>
+                <h4>Follow Me</h4>
+                <div class="social-icons">
+                    <a href="#">FB</a>
+                    <a href="#">IG</a>
+                    <a href="#">LI</a>
+                </div>
+            </div>
+            <div>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop">↑</button>
+
 </body>
 </html>
