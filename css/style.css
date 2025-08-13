@@ -616,3 +616,103 @@ p {
     flex-direction: column;
   }
 }
+
+/* Cover photo background */
+.cover-photo {
+    background: url('../images/img_banner_main.png') no-repeat center center/cover;
+    height: 350px;
+}
+
+/* Profile card */
+.profile-card {
+    background: white;
+    max-width: 600px;
+    margin: -80px auto 0;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-top: -100px;
+}
+
+/* Text styles */
+.profile-card h1 {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.profile-card h2 {
+    font-size: 16px;
+    color: orange;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.profile-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 15px;
+}
+
+.linkedin-btn {
+    background: #6b5b95;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.cv-btn {
+    background: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .cover-photo {
+        height: 180px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin-top: -80px;
+    }
+
+    .profile-card {
+        padding: 30px 15px;
+        margin-top: -60px;
+    }
+
+    .profile-card h1 {
+        font-size: 20px;
+    }
+
+    .profile-card h2 {
+        font-size: 14px;
+    }
+}
