@@ -453,6 +453,14 @@ p {
   color: #2C3E50;
   text-align: left;
 }
+.text-desc-light {
+  color: #fffbf3;
+  text-align: left;
+}
+.text-title-light {
+  color: #fffbf3;
+  text-align: center;
+}
 /* Banner */
 .banner-content {
     text-align: center;
