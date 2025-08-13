@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JP Grabs Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <title>JP Grabador Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -42,7 +44,7 @@
             <h1>Hi, I'm JP Grabs</h1>
             <p>Programmer</p>
             <p>Social Media Manager</p>
-            <p>Creative Designer</p>
+            <p>Content Creator</p>
         </div>
     </section>
 
@@ -58,17 +60,22 @@
     <!-- Split Personality -->
     <section id="split" class="dark-section fade-in">
         <div class="split-container">
-            <div class="split left">
-                <h3>Tech Side</h3>
-                <p>Clean, efficient code and logical problem-solving.</p>
+            <div class="split left" data-aos="fade-left">
+                <h3>Job Tech Experience</h3>
+                <p class="text-desc">Worked on various enterprise-level projects, mobile applications, and automation scripts.</p>
             </div>
-            <div class="split right">
-                <h3>Creative Side</h3>
-                <p>Visual storytelling, branding, and design aesthetics.</p>
+            <div class="split right" data-aos="fade-right">
+                <h3>SMM and Content Creation Experience</h3>
+                <p class="text-desc">Managed social media strategies, created ad campaigns, and produced creative content using Canva.</p>
             </div>
         </div>
     </section>
-
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  
 <!-- Tech Projects -->
 <section id="tech-projects" class="light-section fade-in">
     <h2>Tech Projects</h2>
@@ -161,5 +168,8 @@
     <!-- Back to Top Button -->
     <button id="backToTop">↑</button>
 
+  <script>
+    AOS.init({ duration: 800 });
+  </script>
 </body>
 </html>
