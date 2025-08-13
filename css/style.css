@@ -197,9 +197,18 @@ header .container{
 }
 
 .gallery-item img {
-    display: block;
-    margin: 0 auto;
+    width: 100%;
+    height: 250px; /* Fixed height for consistent grid */
+    object-fit: cover; /* Crops without stretching */
     border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Hover effect */
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item p {
