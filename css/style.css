@@ -7,102 +7,6 @@
    - Back-to-top floating button
    ------------------------- */
 
-/* ======================================= */
-/* ====== Mobile Responsive styles ====== */
-/* ======================================= */
-
-@media (max-width:1100px){
-  .gallery{grid-template-columns:repeat(3, 1fr)}
-  .split{height:420px;flex-direction:column}
-  .split-left,.split-right{height:auto;padding:22px}
-}
-
-@media (max-width: 1024px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-  .split-container {
-    flex-direction: column;
-  }
-}
-
-@media (max-width:800px){
-  .nav-links{display:none}
-  .hamburger{display:block}
-  header .container{padding:10px}
-  .mobile-nav{display:block}
-  .gallery{grid-template-columns:repeat(2,1fr)}
-  footer{flex-direction:column;gap:10px}
-  .split{height:auto}
-}
-
-@media (max-width: 768px) {
-    .nav-container {
-        position: relative;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0; /* align dropdown to right */
-        background-color: #415E72;
-        flex-direction: column;
-        gap: 0;
-        display: none;
-        width: 200px; /* fixed width menu */
-        padding: 0.5rem 1rem;
-        border-radius: 0 0 0 8px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-@media (max-width: 600px) {
-    .cover-photo {
-        height: 180px;
-    }
-
-    .profile-pic {
-        width: 120px;
-        height: 120px;
-        margin-top: -80px;
-    }
-
-    .profile-card {
-        padding: 30px 15px;
-        margin-top: -60px;
-    }
-
-    .profile-card h1 {
-        font-size: 20px;
-    }
-
-    .profile-card h2 {
-        font-size: 14px;
-    }
-}
-
-
-@media (max-width:420px){
-  .gallery{grid-template-columns:repeat(1,1fr)}
-  .banner.dark h1{font-size:1.25rem}
-  header .container{padding:8px}
-}
-
-
 /* ====== Variables & Reset ====== */
 :root{
   --dark: #2C3E50;
@@ -344,8 +248,19 @@ header .container{
   box-shadow:0 6px 18px rgba(13,18,25,0.06);
   transition: transform .22s ease, filter .22s ease;
 }
+
 .gallery img:hover{ transform:scale(1.03) }
 
+.gallery-item a {
+  text-decoration: none; /* remove underline */
+  color: inherit; /* keep same text color as parent */
+}
+
+.gallery-item a:hover {
+  color: #0077ff; /* optional hover color */
+}
+
+/* PROJECT ITEM */
 .project-item img {
     width: 100%;
     border-radius: 8px;
@@ -741,4 +656,100 @@ p {
     font-weight: bold;
     display: inline-block;
 }
+
+/* ======================================= */
+/* ====== Mobile Responsive styles ====== */
+/* ======================================= */
+
+@media (max-width:1100px){
+  .gallery{grid-template-columns:repeat(3, 1fr)}
+  .split{height:420px;flex-direction:column}
+  .split-left,.split-right{height:auto;padding:22px}
+}
+
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+  .split-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width:800px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  header .container{padding:10px}
+  .mobile-nav{display:block}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  footer{flex-direction:column;gap:10px}
+  .split{height:auto}
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        position: relative;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0; /* align dropdown to right */
+        background-color: #415E72;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+        width: 200px; /* fixed width menu */
+        padding: 0.5rem 1rem;
+        border-radius: 0 0 0 8px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .cover-photo {
+        height: 180px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin-top: -80px;
+    }
+
+    .profile-card {
+        padding: 30px 15px;
+        margin-top: -60px;
+    }
+
+    .profile-card h1 {
+        font-size: 20px;
+    }
+
+    .profile-card h2 {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width:420px){
+  .gallery{grid-template-columns:repeat(1,1fr)}
+  .banner.dark h1{font-size:1.25rem}
+  header .container{padding:8px}
+}
+
 

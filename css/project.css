@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.navbar {
+  background: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.project-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Tech Stack */
+.stack-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stack-item {
+  background: #007bff;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Links */
+.btn-link {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 1rem 0;
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.related-projects .related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 1rem;
+}
+
+.related-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;            /* Makes it round */
+  background-color: #fff;        /* Customize as needed */
+  opacity: 0.5;
+  border: none;
+  margin: 0 6px;
+  padding: 0;
+  transition: opacity 0.3s;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #000;        /* Active indicator color */
+}
+
+
+/* ====== NAVBAR (dark background) ====== */
+header{
+  width:100%;
+  background:var(--dark);
+  color:var(--white);
+  position:sticky;
+  top:0;
+  z-index:120;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 12px;
+}
+
+/* logo */
+.logo{
+  font-weight:700;
+  font-size:1.05rem;
+  color:var(--white);
+}
+
+/* nav links (desktop) */
+.nav-links{
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+.nav-links a{
+  color:var(--muted-dark);
+  text-decoration:none;
+  font-weight:600;
+  padding:8px 10px;
+  border-radius:8px;
+}
+.nav-links a:hover,
+.nav-links a.active{
+  background: rgba(255,255,255,0.06);
+  color:var(--white);
+}
+
+/* hamburger (mobile) */
+.hamburger{
+  display:none;
+  font-size:22px;
+  color:var(--white);
+  cursor:pointer;
+  user-select:none;
+}
+
+/* mobile nav - toggled */
+.mobile-nav {
+  display:none;
+  background:var(--dark);
+  color:var(--white);
+  padding:12px;
+}
+.mobile-nav a{
+  display:block;
+  color:var(--white);
+  padding:10px 6px;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+/* ====== Banner (dark first) ====== */
+.banner.dark{
+  background: linear-gradient(180deg, rgba(44,62,80,1) 0%, rgba(36,50,65,1) 100%);
+  color:var(--white);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-height:260px;
+}
+.banner.dark h1{
+  font-size:2rem;
+}
+.banner.dark p{color:var(--muted-dark);margin-bottom:16px}
+.banner.dark .container{padding:28px 12px}
+
+/* ====== Light section ====== */
+.light{
+  background:var(--white);
+  color:#111827;
+}
+
+/* ====== Dark section base ====== */
+.dark{
+  background:var(--dark);
+  color:var(--white);
+}
