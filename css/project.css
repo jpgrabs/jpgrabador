@@ -5,29 +5,12 @@ body {
   color: #333;
 }
 
-.navbar {
-  background: #222;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.8rem 2rem;
-  align-items: center;
-}
+
 
 .logo {
   font-weight: bold;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-}
 
 .container {
   max-width: 900px;
@@ -38,6 +21,7 @@ body {
 .project-title {
   text-align: center;
   margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 /* Slider */
@@ -109,13 +93,6 @@ body {
   border-radius: 8px;
 }
 
-.footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
 
 .carousel-indicators [data-bs-target] {
   width: 10px;
@@ -180,14 +157,6 @@ header .container{
   color:var(--white);
 }
 
-/* hamburger (mobile) */
-.hamburger{
-  display:none;
-  font-size:22px;
-  color:var(--white);
-  cursor:pointer;
-  user-select:none;
-}
 
 /* mobile nav - toggled */
 .mobile-nav {
