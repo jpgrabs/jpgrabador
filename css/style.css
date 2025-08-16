@@ -198,8 +198,7 @@ header .container{
 
 .gallery-item img {
     width: 100%;
-    height: 250px; /* Fixed height for consistent grid */
-    object-fit: cover; /* Crops without stretching */
+    aspect-ratio: 1 / 1;  /* keeps it square */
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -746,5 +745,3 @@ h2 {
   .banner.dark h1{font-size:1.25rem}
   header .container{padding:8px}
 }
-
-
