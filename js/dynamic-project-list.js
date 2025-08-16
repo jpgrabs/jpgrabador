@@ -2,50 +2,50 @@
 const projects = [
     {
         id: 1,
-        title: "Project 1 Title",
+        title: "Ka-Partner App",
         image: "images/proj-logo/ic_kapartner.png",
         description: "This is the detailed description of Project 1. You can explain the features, technologies used, challenges faced, and the results.",
         link:"kapartner-app-smart.html"
     },
     {
         id: 2,
-        title: "Project 2 Title",
-        image: "images/proj-logo/ic_kapartner.png",
+        title: "AlmuSalita App",
+        image: "images/proj-logo/ic_almusalita.png",
         description: "Detailed description of Project 2. Explain what it does, why you built it, and how it works.",
-        link:"#"
+        link:"almusalita-app.html"
     },
     {
         id: 3,
         title: "Project 3 Title",
-        image: "images/proj-logo/ic_kapartner.png",
+        image: "images/notavail.jpg",
         description: "Detailed description of Project 3. Include challenges and how you overcame them.",
         link:"#"
     },
     {
         id: 1,
         title: "Project 1 Title",
-        image: "images/proj-logo/ic_kapartner.png",
+        image: "images/notavail.jpg",
         description: "This is the detailed description of Project 1. You can explain the features, technologies used, challenges faced, and the results.",
         link:"#"
     },
     {
         id: 2,
         title: "Project 2 Title",
-        image: "images/proj-logo/ic_kapartner.png",
+        image: "images/notavail.jpg",
         description: "Detailed description of Project 2. Explain what it does, why you built it, and how it works.",
         link:"#"
     },
     {
         id: 1,
         title: "Project 1 Title",
-        image: "images/proj-logo/ic_kapartner.png",
+        image: "images/notavail.jpg",
         description: "This is the detailed description of Project 1. You can explain the features, technologies used, challenges faced, and the results.",
         link:"#"
     },
     {
         id: 2,
         title: "Project 2 Title",
-        image: "images/proj-logo/ic_kapartner.png",
+        image: "images/notavail.jpg",
         description: "Detailed description of Project 2. Explain what it does, why you built it, and how it works.",
         link:"#"
     }
@@ -56,13 +56,12 @@ if (document.getElementById("projects-gallery")) {
     const gallery = document.getElementById("projects-gallery");
     projects.forEach(project => {
         const item = document.createElement("div");
-        item.classList.add("project-item");
+        item.classList.add("project-title");
         item.innerHTML = `
             <a href="${project.link}?id=${project.id}">
                 <img src="${project.image}" alt="${project.title}">
-               
+                <p style="text-align:center; margin-left:-50px">${project.title}</p>
             </a>
-             <p>${project.title}</p>
         `;
         gallery.appendChild(item);
     });
