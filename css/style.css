@@ -32,6 +32,10 @@ body{
   font-size:16px;
 }
 
+a {
+  text-decoration: none;  /* removes underline */
+  color: inherit;         /* use same text color as parent */
+}
 /* ====== Containers & Utilities ====== */
 .container{
   width:min(95%, var(--container));
