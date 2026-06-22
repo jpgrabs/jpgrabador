@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JP Grabador — Programmer, Social Media Manager, and Content Creator. Portfolio of mobile apps, web projects, and creative work.">
+    <meta name="description" content="JP Grabador — Programmer, Social Media Manager, and Content Creator. Building apps and crafting stories where tech meets creativity.">
     <meta name="author" content="John Paul Grabador">
     <meta name="theme-color" content="#0F172A">
     <meta name="robots" content="index,follow">
@@ -13,12 +13,12 @@
     <meta property="og:description" content="Where tech meets creativity. Apps, visuals, and experiences by JP Grabador.">
     <meta property="og:image" content="images/img_dp_main_thumbnail.png">
 
-    <title>JP Grabador — Portfolio</title>
+    <title>JP Grabador — Programmer · Creator</title>
 
     <link rel="icon" href="images/img_dp_main_thumbnail.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
@@ -30,12 +30,12 @@
 <header>
     <nav class="navbar" aria-label="Primary">
         <div class="nav-container">
-            <a href="#" class="nav-title">JP Grabs</a>
+            <a href="#top" class="nav-title">JP <span class="nav-dot"></span> Grabs</a>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#split">Experience</a></li>
-                <li><a href="#tech-projects">Tech Projects</a></li>
-                <li><a href="#creative-projects">Creative</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#story">Story</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="hamburger" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
@@ -47,144 +47,270 @@
     </nav>
 </header>
 
-<main>
+<main id="top">
 
-    <!-- Hero -->
-    <div class="cover-photo" aria-hidden="true"></div>
-    <section class="profile-header fade-in" aria-label="Introduction">
-        <img src="images/img_dp_main_thumbnail.png" alt="Portrait of John Paul Grabador" class="profile-pic">
-        <h3>Hi, I'm JP Grabador</h3>
-        <div class="role-list">
-            <span>Programmer</span>
-            <span>Social Media Manager</span>
-            <span>Content Creator</span>
-        </div>
-        <p class="contact-line"><strong>Email</strong> jpgrabador@live.com</p>
-        <p class="contact-line"><strong>Mobile</strong> +63 928 313 8954</p>
-        <div class="buttons">
-            <a href="#" class="cv-btn"><i class="fa-solid fa-download" aria-hidden="true"></i> Download CV</a>
-            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <span class="status-chip">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Available for select projects
+                </span>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="accent-script">JP</span><br>
+                    I build apps<br>
+                    <span class="hero-and">&amp;</span> craft stories.
+                </h1>
+                <p class="hero-sub">
+                    Programmer, Social Media Manager, and Content Creator based in the Philippines —
+                    blending technical precision with creative direction.
+                </p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn--primary">
+                        <span>See my work</span>
+                        <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="btn btn--ghost">
+                        <i class="fa-solid fa-download" aria-hidden="true"></i>
+                        Download CV
+                    </a>
+                </div>
+
+                <dl class="hero-stats">
+                    <div>
+                        <dt>Years</dt>
+                        <dd>6+</dd>
+                    </div>
+                    <div>
+                        <dt>Apps shipped</dt>
+                        <dd>10+</dd>
+                    </div>
+                    <div>
+                        <dt>Disciplines</dt>
+                        <dd>3</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-portrait">
+                    <img src="images/img_dp_main_thumbnail.png" alt="Portrait of John Paul Grabador">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        Code &amp; Create
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="light-section fade-in">
-        <div class="section-head">
-            <span class="eyebrow">About</span>
-            <h2>Where tech meets creativity</h2>
-            <p class="lead">"Turning ideas into apps, visuals, and experiences."</p>
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Android</span><span>•</span>
+            <span>Kotlin</span><span>•</span>
+            <span>Jetpack Compose</span><span>•</span>
+            <span>Web Development</span><span>•</span>
+            <span>Social Media</span><span>•</span>
+            <span>Content Creation</span><span>•</span>
+            <span>Photography</span><span>•</span>
+            <span>Videography</span><span>•</span>
+            <span>Canva</span><span>•</span>
+            <span>Brand Design</span><span>•</span>
+            <!-- duplicate for seamless loop -->
+            <span>Android</span><span>•</span>
+            <span>Kotlin</span><span>•</span>
+            <span>Jetpack Compose</span><span>•</span>
+            <span>Web Development</span><span>•</span>
+            <span>Social Media</span><span>•</span>
+            <span>Content Creation</span><span>•</span>
+            <span>Photography</span><span>•</span>
+            <span>Videography</span><span>•</span>
+            <span>Canva</span><span>•</span>
+            <span>Brand Design</span><span>•</span>
         </div>
-        <p class="body" style="text-align:center;">
-            I'm a passionate developer and digital creator who blends technical skill with creative vision.
-            From building intuitive apps to producing engaging visual content,
-            I bring ideas to life through both code and storytelling.
-        </p>
-    </section>
-
-    <!-- Split: Experience -->
-    <section id="split" class="dark-section fade-in">
-        <div class="section-head">
-            <span class="eyebrow">What I Do</span>
-            <h2>Two crafts, one mindset</h2>
-        </div>
-        <div class="split-container">
-            <article class="split left">
-                <h3>Job Tech Experience</h3>
-                <p class="text-desc">As a <b>tech professional</b>, I design and develop mobile and web applications with a focus on clean code, intuitive UI, and seamless user experiences. My skills span Android development, full-stack web projects, and modern tools like Jetpack Compose, ensuring every product I build is both functional and engaging.</p>
-            </article>
-            <article class="split right">
-                <h3>SMM &amp; Content Creation</h3>
-                <p class="text-desc">As a <b>social media content creator</b>, I craft compelling visuals and narratives that connect with audiences. From filming and editing reels to designing event promos, I handle the full content pipeline — shooting, editing, and publishing materials that amplify brand presence. My work with The Cliffhanger Studios, The Happy Club, AlmuSalita, and SOCCOMM OLLP showcases my ability to merge creative direction with technical execution.</p>
-            </article>
-        </div>
-        <p class="text-title-light">Whether I'm coding an app or creating content that tells a story, my goal is the same — to build experiences that people connect with and remember.</p>
-    </section>
-
-    <!-- Lightbox -->
-    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-        <span id="close" role="button" aria-label="Close image viewer">&times;</span>
-        <img id="lightbox-img" src="" alt="">
     </div>
 
-    <!-- Tech Projects -->
-    <section id="tech-projects" class="light-section fade-in">
-        <div class="section-head">
-            <span class="eyebrow">Selected Work</span>
-            <h2>Tech Projects</h2>
-            <p>A glimpse into the mobile and web products I've built.</p>
-        </div>
-        <div class="gallery">
-            <div class="gallery-item">
-                <a href="#" aria-label="Paybox App"><img src="images/proj-logo/ic_paybox.png" alt="Paybox App logo" loading="lazy"></a>
-                <p>Paybox App</p>
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about-section fade-in">
+        <div class="about-grid">
+            <div class="about-meta">
+                <span class="eyebrow">About</span>
+                <p class="quote-line">"Where tech meets creativity."</p>
             </div>
-            <div class="gallery-item">
-                <a href="kapartner-app-smart.html" aria-label="Ka-Partner App (Smart DMS)"><img src="images/proj-logo/ic_kapartner.png" alt="Ka-Partner App logo" loading="lazy"></a>
-                <p>Ka-Partner App (Smart DMS)</p>
+            <div class="about-body">
+                <h2 class="big-statement">
+                    I turn ideas into <em>apps</em>, <em>visuals</em>, and <em>experiences</em> that people actually remember.
+                </h2>
+                <p>
+                    I'm a developer and digital creator blending technical skill with creative vision.
+                    From building intuitive mobile apps to producing engaging visual content,
+                    I bring ideas to life through both code and storytelling.
+                </p>
+                <p>
+                    My work spans Android development, full-stack web projects, social media direction,
+                    and end-to-end content production — shooting, editing, and publishing campaigns
+                    that feel polished and on-brand.
+                </p>
             </div>
-            <div class="gallery-item">
-                <img src="images/proj-logo/ic_checkapps.png" alt="CheckApps logo" loading="lazy">
-                <p>CheckApps</p>
-            </div>
-            <div class="gallery-item">
-                <img src="images/proj-logo/ic_tric.png" alt="TryC App logo" loading="lazy">
-                <p>TryC App</p>
-            </div>
-            <div class="gallery-item">
-                <img src="images/proj-logo/ic_rmpc.png" alt="RPMC App logo" loading="lazy">
-                <p>RPMC App</p>
-            </div>
-            <div class="gallery-item">
-                <img src="images/proj-logo/ic_phoneperav2.png" alt="PhonePera logo" loading="lazy">
-                <p>PhonePera</p>
-            </div>
-            <div class="gallery-item">
-                <img src="images/proj-logo/ic_roamadex.png" alt="Roamadex logo" loading="lazy">
-                <p>Roamadex</p>
-            </div>
-            <div class="gallery-item">
-                <a href="almusalita-app.html" aria-label="AlmuSalita App"><img src="images/proj-logo/ic_almusalita.png" alt="AlmuSalita App logo" loading="lazy"></a>
-                <p>AlmuSalita App</p>
-            </div>
-        </div>
-        <a href="tech-projects.html" class="view-more">View More</a>
-    </section>
-
-    <!-- Creative Projects -->
-    <section id="creative-projects" class="dark-section fade-in">
-        <div class="section-head">
-            <span class="eyebrow">Creative</span>
-            <h2>SMM + Creative Projects</h2>
-            <p>Visual stories, content production, and brand work.</p>
-        </div>
-        <div class="gallery">
-            <div class="gallery-item-dark"><img src="images/notavail.jpg" alt="Project 1" loading="lazy"><p>Project 1 Title</p></div>
-            <div class="gallery-item-dark"><img src="images/notavail.jpg" alt="Project 2" loading="lazy"><p>Project 2 Title</p></div>
-            <div class="gallery-item-dark"><img src="images/notavail.jpg" alt="Project 3" loading="lazy"><p>Project 3 Title</p></div>
-            <div class="gallery-item-dark"><img src="images/notavail.jpg" alt="Project 4" loading="lazy"><p>Project 4 Title</p></div>
-            <div class="gallery-item-dark"><img src="images/notavail.jpg" alt="Project 5" loading="lazy"><p>Project 5 Title</p></div>
-            <div class="gallery-item-dark"><img src="images/notavail.jpg" alt="Project 6" loading="lazy"><p>Project 6 Title</p></div>
-            <div class="gallery-item-dark"><img src="images/notavail.jpg" alt="Project 7" loading="lazy"><p>Project 7 Title</p></div>
-            <div class="gallery-item-dark"><img src="images/notavail.jpg" alt="Project 8" loading="lazy"><p>Project 8 Title</p></div>
-        </div>
-        <a href="creative-projects.html" class="view-more">View More</a>
-    </section>
-
-    <!-- Job Tech Experience -->
-    <section class="light-section fade-in">
-        <div class="section-head">
-            <span class="eyebrow">Experience</span>
-            <h2>Job Tech Experience</h2>
-            <p>Worked on enterprise-level projects, mobile applications, and automation scripts.</p>
         </div>
     </section>
 
-    <!-- SMM & Creative Experience -->
-    <section class="dark-section fade-in">
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="services-section fade-in">
         <div class="section-head">
-            <span class="eyebrow">Experience</span>
-            <h2>SMM + Creative Experience</h2>
-            <p class="text-title-light">Managed social media strategies, created ad campaigns, and produced creative content using Canva.</p>
+            <span class="eyebrow">Services</span>
+            <h2>Three crafts, one obsession with quality</h2>
+        </div>
+        <div class="services-grid">
+            <article class="service-card">
+                <div class="service-num">01</div>
+                <i class="fa-solid fa-code service-icon" aria-hidden="true"></i>
+                <h3>Tech &amp; Development</h3>
+                <p>Native Android apps in Kotlin &amp; Jetpack Compose, plus modern web work — built clean, intuitive, and ready to ship.</p>
+                <ul class="service-list">
+                    <li>Mobile app development</li>
+                    <li>UI/UX implementation</li>
+                    <li>REST API integration</li>
+                </ul>
+            </article>
+
+            <article class="service-card service-card--accent">
+                <div class="service-num">02</div>
+                <i class="fa-solid fa-bullhorn service-icon" aria-hidden="true"></i>
+                <h3>Social Media Management</h3>
+                <p>Strategy, scheduling, and storytelling — turning feeds into channels people actually want to follow.</p>
+                <ul class="service-list">
+                    <li>Content strategy</li>
+                    <li>Campaign management</li>
+                    <li>Brand voice &amp; growth</li>
+                </ul>
+            </article>
+
+            <article class="service-card">
+                <div class="service-num">03</div>
+                <i class="fa-solid fa-camera-retro service-icon" aria-hidden="true"></i>
+                <h3>Content Creation</h3>
+                <p>From shoot to post — reels, event promos, photo content, and design work that's on-brand and on-time.</p>
+                <ul class="service-list">
+                    <li>Photo &amp; video</li>
+                    <li>Editing &amp; post-production</li>
+                    <li>Graphic design (Canva)</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED WORK ===== -->
+    <section id="work" class="work-section fade-in">
+        <div class="section-head section-head--split">
+            <div>
+                <span class="eyebrow">Selected Work</span>
+                <h2>Featured projects</h2>
+            </div>
+            <a href="tech-projects.html" class="head-link">
+                View all <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="work-grid">
+            <a href="kapartner-app-smart.html" class="work-card work-card--lg">
+                <div class="work-thumb">
+                    <img src="images/proj-logo/ic_kapartner.png" alt="Ka-Partner App" loading="lazy">
+                </div>
+                <div class="work-meta">
+                    <span class="work-tag">Featured · Android</span>
+                    <h3>Ka-Partner App (Smart DMS)</h3>
+                    <p>Retailer mobile app for Smart Communications — load wallet, suki list, and transaction tooling.</p>
+                </div>
+            </a>
+
+            <a href="almusalita-app.html" class="work-card">
+                <div class="work-thumb">
+                    <img src="images/proj-logo/ic_almusalita.png" alt="AlmuSalita App" loading="lazy">
+                </div>
+                <div class="work-meta">
+                    <span class="work-tag">Android · Faith</span>
+                    <h3>AlmuSalita</h3>
+                    <p>Daily Catholic spiritual companion mobile app with offline Bible study.</p>
+                </div>
+            </a>
+
+            <a href="#" class="work-card">
+                <div class="work-thumb">
+                    <img src="images/proj-logo/ic_paybox.png" alt="Paybox App" loading="lazy">
+                </div>
+                <div class="work-meta">
+                    <span class="work-tag">Android · Fintech</span>
+                    <h3>Paybox</h3>
+                    <p>Payments and wallet experience built for everyday use.</p>
+                </div>
+            </a>
+
+            <a href="#" class="work-card">
+                <div class="work-thumb">
+                    <img src="images/proj-logo/ic_phoneperav2.png" alt="PhonePera" loading="lazy">
+                </div>
+                <div class="work-meta">
+                    <span class="work-tag">Android</span>
+                    <h3>PhonePera</h3>
+                    <p>Mobile loading and top-up flow with a clean, fast UI.</p>
+                </div>
+            </a>
+
+            <a href="#" class="work-card">
+                <div class="work-thumb">
+                    <img src="images/proj-logo/ic_roamadex.png" alt="Roamadex" loading="lazy">
+                </div>
+                <div class="work-meta">
+                    <span class="work-tag">Android · Travel</span>
+                    <h3>Roamadex</h3>
+                    <p>Travel companion concept with mapped points of interest.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== STORY / DUAL ===== -->
+    <section id="story" class="story-section fade-in">
+        <div class="section-head">
+            <span class="eyebrow">The Story</span>
+            <h2>Two crafts. One mindset.</h2>
+        </div>
+        <div class="story-grid">
+            <article class="story-card">
+                <span class="story-num">01</span>
+                <h3>Tech Professional</h3>
+                <p>I design and develop mobile and web applications with a focus on clean code, intuitive UI, and seamless user experience. From Android in Kotlin &amp; Jetpack Compose to full-stack web projects — every product I build aims to be both functional and engaging.</p>
+                <div class="story-tags">
+                    <span>Kotlin</span><span>Jetpack Compose</span><span>REST</span><span>Git</span>
+                </div>
+            </article>
+            <article class="story-card story-card--alt">
+                <span class="story-num">02</span>
+                <h3>Content Creator &amp; SMM</h3>
+                <p>I craft visuals and narratives that connect with audiences — from filming and editing reels to designing event promos and managing brand presence. Past work with The Cliffhanger Studios, The Happy Club, AlmuSalita, and SOCCOMM OLLP.</p>
+                <div class="story-tags">
+                    <span>Photography</span><span>Videography</span><span>Canva</span><span>Strategy</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section fade-in">
+        <div class="cta-inner">
+            <span class="eyebrow">Let's collaborate</span>
+            <h2 class="cta-title">Have a project in mind?</h2>
+            <p class="cta-sub">Whether you need an app built, a brand to grow, or a story told — let's make something memorable together.</p>
+            <div class="cta-actions">
+                <a href="mailto:contact@jpgrabs.com" class="btn btn--primary">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                    Start a conversation
+                </a>
+                <a href="#contact" class="btn btn--ghost">View contact info</a>
+            </div>
         </div>
     </section>
 
@@ -195,6 +321,7 @@
     <div>
         <h4>Email</h4>
         <p><a href="mailto:contact@jpgrabs.com">contact@jpgrabs.com</a></p>
+        <p style="margin-top:6px;">jpgrabador@live.com</p>
     </div>
     <div>
         <h4>Follow Me</h4>
@@ -210,6 +337,12 @@
         <p style="margin-top:8px;">&copy; <span id="year">2026</span> JP Grabador</p>
     </div>
 </footer>
+
+<!-- Lightbox (kept for gallery images elsewhere) -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <span id="close" role="button" aria-label="Close image viewer">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+</div>
 
 <!-- Back to Top -->
 <button id="backToTop" aria-label="Back to top">↑</button>
