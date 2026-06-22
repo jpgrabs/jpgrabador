@@ -1,950 +1,562 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>John Paul Grabador</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="John Paul Grabador Portfolio">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Paul Grabador — Mobile App Developer, Web Developer, and Social Media Manager based in Caloocan City, Philippines. 7+ years of building apps and managing brands.">
     <meta name="author" content="John Paul Grabador">
+    <meta name="theme-color" content="#0F172A">
     <meta name="robots" content="index,follow">
-    <link href="images/proj/pro_pic3.png" rel="icon">
-    <link href="images/proj/pro_pic3.png" rel="apple-touch-icon">
 
-    <link href="css/bootstrap-copy.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/bootstrap-glyphicons.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <meta property="og:url" content="{{url()->current()}}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/images/proj/pro_pic3.png">
-    <meta property="og:site_name" content="JP Grabador" >
-    <meta property="og:image:width" content="1200" >
-    <meta property="og:image:height" content="630" >
-    <meta property="og:title" content="JP Grabador Portfolio " >
-  </head>
+    <meta property="og:title" content="JP Grabador — Mobile, Web & Social Media">
+    <meta property="og:description" content="Where tech meets creativity. 33+ apps, 7+ years of experience, 3 disciplines.">
+    <meta property="og:image" content="images/img_dp_main_thumbnail.png">
 
-  <body class="index" id="page-top">
-    <div w3-include-html="footer.html"></div>
-       <!-- navbar -->
-       <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-              <a class="navbar-brand" href="#page-top">JPGrabador </a>
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fa fa-bars"></i>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#about">About</a>
-                    </li>
-                     <li class="nav-item">
-                      <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                      <li class="nav-item">
-                       <a class="nav-link" href="profile.html">Profile</a>
-                     </li>
-                    <li class="nav-item">
-                     <a class="nav-link" href="tutorial-main.html">Tutorials</a>
-                   </li>
+    <title>John Paul Grabador — Developer · Creator</title>
+
+    <link rel="icon" href="images/img_dp_main_thumbnail.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/disable-right-click.js" defer></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <nav class="navbar" aria-label="Primary">
+        <div class="nav-container">
+            <a href="#top" class="nav-title">JP <span class="nav-dot"></span> Grabs</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certs">Credentials</a></li>
+                <li><a href="#tutorials">Tutorials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <span class="status-chip">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Available for select projects
+                </span>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="accent-script">JP</span><br>
+                    I build apps<br>
+                    <span class="hero-and">&amp;</span> craft stories.
+                </h1>
+                <p class="hero-sub">
+                    Mobile App Developer, Web Developer, and Social Media Manager based in
+                    Caloocan City, Philippines — blending technical precision with creative direction.
+                </p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn--primary">
+                        <span>See my work</span>
+                        <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                    </a>
+                    <a href="jpgrabador.pdf" target="_blank" rel="noopener" class="btn btn--ghost">
+                        <i class="fa-solid fa-download" aria-hidden="true"></i>
+                        Download CV
+                    </a>
+                </div>
+
+                <dl class="hero-stats">
+                    <div>
+                        <dt>Years</dt>
+                        <dd>7+</dd>
+                    </div>
+                    <div>
+                        <dt>Projects</dt>
+                        <dd>33+</dd>
+                    </div>
+                    <div>
+                        <dt>Disciplines</dt>
+                        <dd>3</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-portrait">
+                    <img src="images/img_dp_main_thumbnail.png" alt="Portrait of John Paul Grabador">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        Code &amp; Create
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Android</span><span>•</span>
+            <span>Kotlin</span><span>•</span>
+            <span>Java</span><span>•</span>
+            <span>Jetpack Compose</span><span>•</span>
+            <span>REST APIs</span><span>•</span>
+            <span>Web Development</span><span>•</span>
+            <span>React</span><span>•</span>
+            <span>PHP / MySQL</span><span>•</span>
+            <span>Social Media</span><span>•</span>
+            <span>Content Creation</span><span>•</span>
+            <span>Photography</span><span>•</span>
+            <span>Videography</span><span>•</span>
+            <span>Canva</span><span>•</span>
+            <span>Brand Design</span><span>•</span>
+            <!-- loop -->
+            <span>Android</span><span>•</span>
+            <span>Kotlin</span><span>•</span>
+            <span>Java</span><span>•</span>
+            <span>Jetpack Compose</span><span>•</span>
+            <span>REST APIs</span><span>•</span>
+            <span>Web Development</span><span>•</span>
+            <span>React</span><span>•</span>
+            <span>PHP / MySQL</span><span>•</span>
+            <span>Social Media</span><span>•</span>
+            <span>Content Creation</span><span>•</span>
+            <span>Photography</span><span>•</span>
+            <span>Videography</span><span>•</span>
+            <span>Canva</span><span>•</span>
+            <span>Brand Design</span><span>•</span>
+        </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about-section fade-in">
+        <div class="about-grid">
+            <div class="about-meta">
+                <span class="eyebrow">About</span>
+                <p class="quote-line">"Where tech meets creativity."</p>
+            </div>
+            <div class="about-body">
+                <h2 class="big-statement">
+                    I turn ideas into <em>apps</em>, <em>visuals</em>, and <em>experiences</em> that people actually remember.
+                </h2>
+                <p>
+                    I have more than <b>7 years</b> of experience creating and developing mobile applications,
+                    plus a solid foundation in web development across both front-end and back-end.
+                    My passion lies in learning new technologies and shipping work that's clean,
+                    intuitive, and ready for the real world.
+                </p>
+                <p>
+                    Beyond code, I'm confident at building campaigns. I've managed and handled
+                    different social media platforms — driving engagement, growing communities,
+                    and producing content that promotes events and products effectively.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="services-section fade-in">
+        <div class="section-head">
+            <span class="eyebrow">Services</span>
+            <h2>Three crafts, one obsession with quality</h2>
+        </div>
+        <div class="services-grid">
+            <article class="service-card">
+                <div class="service-num">01</div>
+                <i class="fa-solid fa-mobile-screen-button service-icon" aria-hidden="true"></i>
+                <h3>Mobile App Development</h3>
+                <p>Native Android in Kotlin &amp; Java — clean architecture, REST integration, and intuitive UI shipped to Google Play.</p>
+                <ul class="service-list">
+                    <li>Android (Kotlin, Java)</li>
+                    <li>Jetpack Compose</li>
+                    <li>REST APIs &amp; integrations</li>
                 </ul>
-              </div>
-        </nav>
-    <!-- navbar end-->
-    <!-- Header -->
-    <header class="masthead-bg">
-      <div class="container">
-        <img class="img-fluid" src="images/proj/pro_pic4.png" alt="">
-        <div class="intro-text">
-          <h1 class="skills-text-title">John Paul Grabador</h1>
-          <hr class="star-light-bg">
-          <span class="skills"><h3>Mobile App Developer | Web Developer | Social Media Manager</h3></span>
+            </article>
+
+            <article class="service-card service-card--accent">
+                <div class="service-num">02</div>
+                <i class="fa-solid fa-bullhorn service-icon" aria-hidden="true"></i>
+                <h3>Social Media Management</h3>
+                <p>Strategy, scheduling, and storytelling — turning feeds into channels people actually want to follow.</p>
+                <ul class="service-list">
+                    <li>Content strategy &amp; calendars</li>
+                    <li>Community management</li>
+                    <li>Campaign rollout &amp; growth</li>
+                </ul>
+            </article>
+
+            <article class="service-card">
+                <div class="service-num">03</div>
+                <i class="fa-solid fa-camera-retro service-icon" aria-hidden="true"></i>
+                <h3>Content Creation</h3>
+                <p>From shoot to post — reels, event promos, photo content, and brand design that's on-brand and on-time.</p>
+                <ul class="service-list">
+                    <li>Photography &amp; videography</li>
+                    <li>Editing &amp; post-production</li>
+                    <li>Graphic design (Canva)</li>
+                </ul>
+            </article>
         </div>
-      </div>
-    </header>
-
-
-    <!-- /// -->
-
-    <!-- Portfolio Grid Section ,,LOGO IMGs -->
-    <section id="portfolio"><center>
-      <div id="curated-collection" class="container curated">
-        <h2 class="text-center">Mobile Development</h2>
-        <hr class="star-primary">
-        <div class="row">
-        <div class="col mx-0 px-0">
-            <div class="row">
-                  <div class="col-lg-3 col-md-6">
-                  <div class="item" >
-                  <div class="container text-left m-1 pb-3 box-item">
-                          <div class="row"><div class="col px-0 image"><a href="pepapp.html" target ="blank">
-                              <img src="images/proj/mainlogo/ic_pep.png"/>
-                          </div></div></a>
-                          <div class="col"><div class="col px-3 mt-2 py-0 title">PEP</div>
-                          <div class="type"><br><br></div>
-                          </div>
-                 </div>
-                 </div>
-                 </div>
-                 <!---->
-                 <div class="col-lg-3 col-md-6">
-                 <div class="item" >
-                 <div class="container text-left m-1 pb-3 box-item">
-                         <div class="row"><div class="col px-0 image"><a href="spottapark.html" >
-                             <img src="images/proj/mainlogo/ic_spottapark.png"/>
-                         </div></div></a>
-                         <div class="col"><div class="col px-3 mt-2 py-0 title">Spottapark</div>
-                         <div class="type"><br><br></div>
-                         </div>
-                </div>
-                </div>
-                </div>
-                <!---->
-                <div class="col-lg-3 col-md-6">
-                <div class="item" >
-                <div class="container text-left m-1 pb-3 box-item">
-                        <div class="row"><div class="col px-0 image"><a href="ipostmo.html" >
-                            <img src="images/proj/mainlogo/ic_ipostmo.png"/>
-                        </div></div></a>
-                        <div class="col"><div class="col px-3 mt-2 py-0 title">IpostMo</div>
-                        <div class="type"><br><br></div>
-                        </div>
-               </div>
-               </div>
-               </div>
-               <!---->
-               <div class="col-lg-3 col-md-6">
-               <div class="item" >
-               <div class="container text-left m-1 pb-3 box-item">
-                       <div class="row"><div class="col px-0 image"><a href="prop.html" >
-                           <img src="images/proj/mainlogo/ic_prop.png"/>
-                       </div></div></a>
-                       <div class="col"><div class="col px-3 mt-2 py-0 title">ProP</div>
-                       <div class="type"><br><br></div>
-                       </div>
-              </div>
-              </div>
-              </div>
-            </div>
-            <!-- end line 4 pc -->
-            <br>
-            <div class="row">
-                  <div class="col-lg-3 col-md-6">
-                  <div class="item">
-                  <div class="container text-left m-1 pb-3 box-item">
-                          <div class="row"><div class="col px-0 image"><a href="mpos.html" >
-                              <img src="images/proj/mainlogo/ic_mpos.png"/>
-                          </div></div></a>
-                          <div class="col"><div class="col px-3 mt-2 py-0 title">MPOS</div>
-                          <div class="type"><br><br></div>
-                          </div>
-                 </div>
-                 </div>
-                 </div>
-                 <!---->
-                 <div class="col-lg-3 col-md-6">
-                 <div class="item">
-                 <div class="container text-left m-1 pb-3 box-item">
-                         <div class="row"><div class="col px-0 image"><a href="ride.html" >
-                             <img src="images/proj/mainlogo/ic_ride.png"/>
-                         </div></div></a>
-                         <div class="col"><div class="col px-3 mt-2 py-0 title">Ride</div>
-                         <div class="type"><br><br></div>
-                         </div>
-                </div>
-                </div>
-                </div>
-                <!---->
-                <div class="col-lg-3 col-md-6">
-                <div class="item" >
-                <div class="container text-left m-1 pb-3 box-item">
-                        <div class="row"><div class="col px-0 image"><a href="autozon.html" >
-                            <img src="images/proj/mainlogo/ic_autozon.png"/>
-                        </div></div></a>
-                        <div class="col"><div class="col px-3 mt-2 py-0 title">Autozon</div>
-                        <div class="type"><br><br></div>
-                        </div>
-               </div>
-               </div>
-               </div>
-               <!---->
-               <div class="col-lg-3 col-md-6">
-               <div class="item" >
-               <div class="container text-left m-1 pb-3 box-item">
-                       <div class="row"><div class="col px-0 image"><a href="whogoat.html" >
-                           <img src="images/proj/mainlogo/ic_whogoat.png"/>
-                       </div></div></a>
-                       <div class="col"><div class="col px-3 mt-2 py-0 title">Whogoat</div>
-                       <div class="type"><br><br></div>
-                       </div>
-              </div>
-              </div>
-              </div>
-            </div>
-            <!-- end line 4 pc -->
-            <br>
-            <div class="row">
-                  <div class="col-lg-3 col-md-6">
-                  <div class="item">
-                  <div class="container text-left m-1 pb-3 box-item">
-                          <div class="row"><div class="col px-0 image"><a href="appchemy.html" >
-                              <img src="images/proj/mainlogo/ic_appchemy.png"/>
-                          </div></div></a>
-                          <div class="col"><div class="col px-3 mt-2 py-0 title">AppChemy</div>
-                          <div class="type"><br><br></div>
-                          </div>
-                 </div>
-                 </div>
-                 </div>
-                 <!---->
-                 <div class="col-lg-3 col-md-6">
-                 <div class="item">
-                 <div class="container text-left m-1 pb-3 box-item">
-                         <div class="row"><div class="col px-0 image"><a href="cms.html" >
-                             <img src="images/proj/mainlogo/ic_churchmanagementsystem.png"/>
-                         </div></div></a>
-                         <div class="col"><div class="col px-3 mt-2 py-0 title">CMS</div>
-                         <div class="type"><br><br></div>
-                         </div>
-                </div>
-                </div>
-                </div>
-                <!---->
-                <div class="col-lg-3 col-md-6">
-                <div class="item">
-                <div class="container text-left m-1 pb-3 box-item">
-                        <div class="row"><div class="col px-0 image"><a href="vca.html" >
-                            <img src="images/proj/mainlogo/ic_voicecommand.png"/>
-                        </div></div></a>
-                        <div class="col"><div class="col px-3 mt-2 py-0 title">VCA</div>
-                        <div class="type"><br><br></div>
-                        </div>
-               </div>
-               </div>
-               </div>
-               <!---->
-               <div class="col-lg-3 col-md-6">
-               <div class="item">
-               <div class="container text-left m-1 pb-3 box-item">
-                       <div class="row"><div class="col px-0 image"><a href="btcclicks.html" >
-                           <img src="images/proj/mainlogo/ic_btcclicks.png"/>
-                       </div></div></a>
-                       <div class="col"><div class="col px-3 mt-2 py-0 title">Btc Clicks</div>
-                       <div class="type"><br><br></div>
-                       </div>
-              </div>
-              </div>
-              </div>
-            </div>
-            <!-- end line 4 pc -->
-            <br>
-            <div class="row">
-                  <div class="col-lg-3 col-md-6">
-                  <div class="item">
-                  <div class="container text-left m-1 pb-3 box-item">
-                          <div class="row"><div class="col px-0 image"><a href="olfu.html" >
-                              <img src="images/proj/mainlogo/ic_olfu.png"/>
-                          </div></div></a>
-                          <div class="col"><div class="col px-3 mt-2 py-0 title">OLFU</div>
-                          <div class="type"><br><br></div>
-                          </div>
-                 </div>
-                 </div>
-                 </div>
-                 <!---->
-                 <div class="col-lg-3 col-md-6">
-                 <div class="item">
-                 <div class="container text-left m-1 pb-3 box-item">
-                         <div class="row"><div class="col px-0 image"><a href="coinpotpro.html" >
-                             <img src="images/proj/mainlogo/ic_coinpotpro.png"/>
-                         </div></div></a>
-                         <div class="col"><div class="col px-3 mt-2 py-0 title">CoinPot Pro</div>
-                         <div class="type"><br><br></div>
-                         </div>
-                </div>
-                </div>
-                </div>
-                <!---->
-                <div class="col-lg-3 col-md-6">
-                <div class="item">
-                <div class="container text-left m-1 pb-3 box-item">
-                        <div class="row"><div class="col px-0 image"><a href="almusalita-app.html" >
-                            <img src="images/proj/mainlogo/ic_almusalita.png"/>
-                        </div></div></a>
-                        <div class="col"><div class="col px-3 mt-2 py-0 title">AlmuSalita App</div>
-                        <div class="type"><br><br></div>
-                        </div>
-               </div>
-               </div>
-               </div>
-               <!---->
-               <div class="col-lg-3 col-md-6">
-               <div class="item">
-               <div class="container text-left m-1 pb-3 box-item">
-                       <div class="row"><div class="col px-0 image"><a href="roamadex.html" >
-                           <img src="images/proj/mainlogo/ic_roamadex.png"/>
-                       </div></div></a>
-                       <div class="col"><div class="col px-3 mt-2 py-0 title">Roamadex</div>
-                       <div class="type"><br><br></div>
-                       </div>
-              </div>
-              </div>
-              </div>
-          </div>
-          <!-- end line 4 pc -->
-          <br>
-          <div class="row">
-                <div class="col-lg-3 col-md-6">
-                <div class="item">
-                <div class="container text-left m-1 pb-3 box-item">
-                        <div class="row"><div class="col px-0 image"><a href="hyperpocket.html" >
-                            <img src="images/proj/mainlogo/ic_hyperpocket.png"/>
-                        </div></div></a>
-                        <div class="col"><div class="col px-3 mt-2 py-0 title">HyperPocket</div>
-                        <div class="type"><br><br></div>
-                        </div>
-               </div>
-               </div>
-               </div>
-               <!---->
-               <div class="col-lg-3 col-md-6">
-               <div class="item">
-               <div class="container text-left m-1 pb-3 box-item">
-                       <div class="row"><div class="col px-0 image"><a href="phonepera.html" >
-                           <img src="images/proj/mainlogo/ic_phonepera.png"/>
-                       </div></div></a>
-                       <div class="col"><div class="col px-3 mt-2 py-0 title">PhonePera</div>
-                       <div class="type"><br><br></div>
-                       </div>
-              </div>
-              </div>
-              </div>
-              <!---->
-              <div class="col-lg-3 col-md-6">
-              <div class="item">
-              <div class="container text-left m-1 pb-3 box-item">
-                      <div class="row"><div class="col px-0 image"><a href="rpmc-app.html" >
-                          <img src="images/proj/mainlogo/ic_rmpc.png"/>
-                      </div></div></a>
-                      <div class="col"><div class="col px-3 mt-2 py-0 title">RPMC App</div>
-                      <div class="type"><br><br></div>
-                      </div>
-             </div>
-             </div>
-             </div>
-             <!---->
-             <div class="col-lg-3 col-md-6">
-             <div class="item">
-             <div class="container text-left m-1 pb-3 box-item">
-                     <div class="row"><div class="col px-0 image"><a href="tryc.html" >
-                         <img src="images/proj/mainlogo/ic_tric.png"/>
-                     </div></div></a>
-                     <div class="col"><div class="col px-3 mt-2 py-0 title">TryC App</div>
-                     <div class="type"><br><br></div>
-                     </div>
-            </div>
-            </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-            <div class="item">
-            <div class="container text-left m-1 pb-3 box-item">
-                    <div class="row"><div class="col px-0 image"><a href="checkapps.html" >
-                        <img src="images/proj/mainlogo/ic_checkapps.png"/>
-                    </div></div></a>
-                    <div class="col"><div class="col px-3 mt-2 py-0 title">CheckApps <br><br></div>
-                    <div class="type"><br></div>
-                    </div>
-            </div>
-            </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-            <div class="item">
-            <div class="container text-left m-1 pb-3 box-item">
-                    <div class="row"><div class="col px-0 image"><a href="statusquotesmemes.html" >
-                        <img src="images/proj/mainlogo/ic_quotememe.png"/>
-                    </div></div></a>
-                    <div class="col"><div class="col px-3 mt-2 py-0 title">Status Quotes & Meme</div>
-                    <div class="type"><br></div>
-                    </div>
-           </div>
-           </div>
-           </div>
-           <div class="col-lg-3 col-md-6">
-           <div class="item">
-           <div class="container text-left m-1 pb-3 box-item">
-                   <div class="row"><div class="col px-0 image"><a href="kapartner-app-smart.html" >
-                       <img src="images/proj/mainlogo/ic_kapartner.png"/>
-                   </div></div></a>
-                   <div class="col"><div class="col px-3 mt-2 py-0 title">Ka-Partner App<br>(Smart DMS)<br></div>
-                   <div class="type"><br></div>
-                   </div>
-          </div>
-          </div>
-          </div>
-           <div class="col-lg-3 col-md-6">
-           <div class="item">
-           <div class="container text-left m-1 pb-3 box-item">
-                   <div class="row"><div class="col px-0 image"><a href="paybox.html" >
-                       <img src="images/proj/mainlogo/ic_paybox.png"/>
-                   </div></div></a>
-                   <div class="col"><div class="col px-3 mt-2 py-0 title">Paybox App<br><br></div>
-                   <div class="type"><br></div>
-                   </div>
-          </div>
-          </div>
-          </div>
-
-         </div>
-
-        <!-- border line end up -->
-        </div>
-        </div>
-        <br><br><!----><!---->
-        <h2 class="text-center">Website</h2>
-        <hr class="star-primary">
-
-        <div class="row">
-        <div class="col mx-0 px-0">
-            <div class="row">
-                  <div class="col-lg-3 col-md-6">
-                  <div class="item">
-                  <div class="container text-left m-1 pb-3 box-item">
-                          <div class="row"><div class="col px-0 image"><a href="pepweb.html" >
-                              <img src="images/proj/mainlogo/ic_pepwebserver.png"/>
-                          </div></div></a>
-                          <div class="col"><div class="col px-3 mt-2 py-0 title">PEP-Web</div>
-                          <div class="type"><br><br></div>
-                          </div>
-                 </div>
-                 </div>
-                 </div>
-                 <!---->
-                 <div class="col-lg-3 col-md-6">
-                 <div class="item" >
-                 <div class="container text-left m-1 pb-3 box-item">
-                         <div class="row"><div class="col px-0 image"><a href="stardibs.html" >
-                             <img src="images/proj/mainlogo/ic_stardibs.png"/>
-                         </div></div></a>
-                         <div class="col"><div class="col px-3 mt-2 py-0 title">Stardibs</div>
-                         <div class="type"><br><br></div>
-                         </div>
-                </div>
-                </div>
-                </div>
-                <!---->
-                <div class="col-lg-3 col-md-6">
-                <div class="item">
-                <div class="container text-left m-1 pb-3 box-item">
-                        <div class="row"><div class="col px-0 image"><a href="firesale.html" >
-                            <img src="images/proj/mainlogo/ic_firesale.png"/>
-                        </div></div></a>
-                        <div class="col"><div class="col px-3 mt-2 py-0 title">Firesale</div>
-                        <div class="type"><br><br></div>
-                        </div>
-               </div>
-               </div>
-               </div>
-               <!---->
-                 <div class="col-lg-3 col-md-6">
-                 <div class="item">
-                 <div class="container text-left m-1 pb-3 box-item">
-                         <div class="row"><div class="col px-0 image"><a href="watchlaterr.html" >
-                             <img src="images/proj/mainlogo/ic_watchlaterrwebuse.png"/>
-                         </div></div></a>
-                         <div class="col"><div class="col px-3 mt-2 py-0 title">Personal Blog sites</div>
-                         <div class="type"><br><br></div>
-                         </div>
-                </div>
-                </div>
-                </div>
-            </div>
-            <!-- end line 4 pc -->
-            <br>
-            <div class="row">
-                  <!---->
-                  <div class="col-lg-3 col-md-6">
-                  <div class="item">
-                  <div class="container text-left m-1 pb-3 box-item">
-                          <div class="row"><div class="col px-0 image"><a href="republisys.html" >
-                              <img src="images/proj/mainlogo/ic_republisys.png"/>
-                          </div></div></a>
-                          <div class="col"><div class="col px-3 mt-2 py-0 title">Republisys</div>
-                          <div class="type"><br><br></div>
-                          </div>
-                 </div>
-                 </div>
-                 </div>
-
-                  <div class="col-lg-3 col-md-6">
-                  <div class="item">
-                  <div class="container text-left m-1 pb-3 box-item">
-                          <div class="row"><div class="col px-0 image"><a href="almusalita-web.html" >
-                              <img src="images/proj/mainlogo/ic_almusalita.png"/>
-                          </div></div></a>
-                          <div class="col"><div class="col px-3 mt-2 py-0 title">AlmuSalita</div>
-                          <div class="type"><br><br></div>
-                          </div>
-                 </div>
-                 </div>
-                 </div>
-                 <!---->
-                 <div class="col-lg-3 col-md-6">
-                 <div class="item">
-                 <div class="container text-left m-1 pb-3 box-item">
-                         <div class="row"><div class="col px-0 image"><a href="rpmc-web.html" >
-                             <img src="images/proj/mainlogo/ic_rmpc.png"/>
-                         </div></div></a>
-                         <div class="col"><div class="col px-3 mt-2 py-0 title">RPMC</div>
-                         <div class="type"><br><br></div>
-                         </div>
-                </div>
-                </div>
-                </div>
-            </div>
-        <!-- border line end up -->
-        </div>
-        </div>
-
-        <br><br><!----><!---->
-        <h2 class="text-center">Desktop Application</h2>
-        <hr class="star-primary">
-        <div class="row">
-        <div class="col mx-0 px-0">
-              <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                    <div class="item">
-                    <div class="container text-left m-1 pb-3 box-item">
-                            <div class="row"><div class="col px-0 image"><a href="comicalley.html" >
-                                <img src="images/proj/mainlogo/ic_comicalley.png"/>
-                            </div></div></a>
-                            <div class="col"><div class="col px-3 mt-2 py-0 title">Comic Alley</div>
-                            <div class="type"><br><br></div>
-                            </div>
-                   </div>
-                   </div>
-                   </div>
-                   <!---->
-                     <div class="col-lg-3 col-md-6">
-                     <div class="item">
-                     <div class="container text-left m-1 pb-3 box-item">
-                             <div class="row"><div class="col px-0 image"><a href="tesspctrading.html" >
-                                 <img src="images/proj/mainlogo/ic_tpct.png"/>
-                             </div></div></a>
-                             <div class="col"><div class="col px-3 mt-2 py-0 title" style="font-size: 17px;">TPCT</div>
-                             <div class="type"><br><br></div>
-                             </div>
-                    </div>
-                    </div>
-                    </div>
-               </div>
-        <!-- border line end up -->
-        </div>
-        </div>
-      <!----><!----><!---->
-      </div>
-    </center></section>
-
-    <!-- About Section -->
-    <section class="success-bg" id="about">
-      <div class="container">
-        <h2 class="text-center">About</h2>
-        <hr class="star-light-bg">
-        <div class="row">
-          <div class="col-lg-6 ml-auto">
-            <p>I have more than 7 years of experience in creating & developing mobile applications & have some experience in web development. I have done numerous projects involving front and back-end development. My passion lies in learning about the latest technologies. I am seeking exciting new challenges in the tech industry. I am confident in my ability to come up with interesting ideas for unforgettable marketing campaigns.</p>
-          </div>
-          <div class="col-lg-6 mr-auto">
-            <p>I managed and handled different kind of social media platforms to increase unique visits and promote some of the events and new products to be effectiveness of the said campaigns</p>
-          </div>
-        </div>
-      </br></br></br>
-        <h2 class="text-center"> Work Experience</h2>
-        <hr class="star-light-bg">
-        <div class="row">
-          <div class="col-lg-4">
-            <h3><b>CURRENT JOB</b></h3>
-                        <h4 style="color:yellow;"><b>Android Developer</b></h4>
-                        <h5 style="color:greenyellow;"><b>Multisys Technologies Corporation</b></h5>
-                        <h6 class="margin-t-10">MAY 2020 to PRESENT</h6>
-                        <p class="font-semi-white margin-tb-30"><b>Android Projects</b></p>
-                        <ul class="list margin-b-30">
-                            <li><a style="color:skyblue;" href="kapartner-app-smart.html" >Ka-Partner App - Smart DMS (Retailer app)</a></li>
-                            <li><a style="color:skyblue;" href="paybox.html" >PayBox (Kiosk machine app)</a></li>
-                        </ul>
-          </div>
-          <div class="col-lg-4">
-                        <h3><b>PREVIOUS JOBS</b></h3>
-                        <h4 style="color:yellow;"><b>Android Developer & Back-End Developer</b></h4>
-                        <h5 style="color:indianred;"><b>AiPayGo, Inc. | Republisys, Inc.</b></h5>
-                        <h6 class="margin-t-10">SEPTEMBER 2018 to MARCH 2020</h6>
-                        <p class="font-semi-white margin-tb-30"><b>Android Projects</b></p>
-                        <ul class="list margin-b-30">
-                            <li><a style="color:skyblue;" href="roamadex.html" >Roamadex (Travel app)</a></li>
-                            <li><a style="color:skyblue;" href="hyperpocket.html" >Hyperpocket (e-wallet)</a></li>
-                            <li><a style="color:skyblue;" href="rpmc-app.html" >RealMark (Real Estate App)</a></li>
-                            <li><a style="color:skyblue;" href="phonepera.html" >PhonePera (e-wallet)</a></li>
-                            <li><a style="color:skyblue;" href="checkapps.html" >CheckApps</a></li>
-                            <li><a style="color:skyblue;" href="tryc.html" >TryC (Travel app)</a></li>
-                        </ul>
-                        <p class="font-semi-white margin-tb-30"><b>Back-End Web/Mobile Developer</b></p>
-                        <ul class="list margin-b-30">
-                            <li><a style="color:skyblue;" href="republisys.html" >Republisys, Inc</a> - <a href="https://www.republisys.com" target="_blank">www.republisys.com</a></li>
-                            <li><a style="color:skyblue;" href="rpmc-web.html" >RealMark Property Management & Construction</a> - <a href="https://www.realmark.ph/" target="_blank">www.realmark.ph</a></li>
-                            <li><a style="color:skyblue;" href="tryc.html" >TryC</a> <a href="#" target="_blank"></a></li>
-                        </ul>
-                        <h4 style="color:yellow;"><b>Android Developer</b></h4>
-                        <h5 style="color:indianred;"><b>Stardibs Corp</b></h5>
-                        <h6 class="margin-t-10">SEPTEMBER 2015 to DECEMBER 2017</h6>
-                        <p class="font-semi-white margin-tb-30"><b>Android Projects</b></p>
-                        <ul class="list margin-b-30">
-                            <li><a style="color:skyblue;" href="spottapark.html" >Spottapark (Parking Reservation app)</a></li>
-                            <li><a style="color:skyblue;" href="ipostmo.html" >iPostMo (Buy & sell app)</a></li>
-                            <li><a style="color:skyblue;" href="prop.html" >ProP (Parking Reservation App)</a></li>
-                            <li><a style="color:skyblue;" href="mpos.html" >MPOS (Parking Reservation App)</a></li>
-                            <li><a style="color:skyblue;" href="ride.html" >Ride (Travel app)</a></li>
-                            <li><a style="color:skyblue;" href="autozon.html" >Autozon (Buy & sell app)</a></li>
-                        </ul>
-          </div>
-          <div class="col-lg-4">
-            <h3><b>OTHER WORK EXPERIENCE</b></h3>
-                        <h4 style="color:yellow;"><b>Community Manager</b></h4>
-                        <h5 style="color:greenyellow;"><b>Coins.PH</b></h5>
-                        <h6 class="margin-t-10">JUNE 2022 to PRESENT</h6>
-                        <p class="font-semi-white margin-tb-30"><b>Social Media Community Groups</b></p>
-                        <ul class="list margin-b-30">
-                            <li><a style="color:skyblue;" href="https://t.me/coinsph_announcements" >Telegram (Announcements)</a></li>
-                            <li><a style="color:skyblue;" href="https://t.me/coinsphfilipino" >Telegram (Community)</a></li>
-                            <li><a style="color:skyblue;" href="https://discord.io/coinscommunity" >Discord</a></li>
-                        </ul>
-                        <h4 style="color:yellow;"><b>Social Media Manager</b></h4>
-                        <h5 style="color:greenyellow;"><b>Ministries & Personal</b></h5>
-                        <h6 class="margin-t-10">OCTOBER 2017 to PRESENT</h6>
-                        <p class="font-semi-white margin-tb-30"><b>Social Media Platforms</b></p>
-                        <ul class="list margin-b-30">
-                            <li><a style="color:skyblue;" href="https://web.facebook.com/AlmuSalita/" >Facebook Page: AlmuSalita by Fr. Luciano Felloni</a></li>
-                            <li><a style="color:skyblue;" href="https://web.facebook.com/groups/almusalitabyfrlucianofellonifollowers" >Facebook Group: Almusalita by Fr Luciano Felloni Followers</a></li>
-                            <li><a style="color:skyblue;" href="http://instagram.com/almusalita2016" >Instagram: AlmuSalita 2016</a></li>
-                            <li><a style="color:skyblue;" href="https://twitter.com/AlmuSalita" >Twitter: AlmuSalita by Fr. Luciano Felloni</a></li>
-                            <li><a style="color:skyblue;" href="https://www.facebook.com/OLLPnova" >Facebook Page: Our Lady of Lourdes Parish, Diocese of Novaliches</a></li>
-                            <li><a style="color:skyblue;" href="https://www.facebook.com/groups/296273571975610" >Facebook Group: Parishioners of Our Lady of Lourdes Parish, Camarin Caloocan</a></li>
-                            <li><a style="color:skyblue;" href="https://linktr.ee/admingrabs" >Admin Grabs Social Media Accounts</a></li>
-                        </ul>
-          </div>
-          <div class="col-lg-8 mx-auto text-center">
-            <a href="https://bit.ly/3sXq1Ec" target ="blank" class="btn btn-lg btn-outline">
-              <i class="fa fa-download"></i>
-              Download Resume
-            </a>
-          </div>
-        </div>
-
-      </div>
-
     </section>
-    <!-- Skills Section -->
-    <section id="skills">
-      <div class="container">
-        <h2 class="text-center">Skills</h2>
-        <hr class="star-primary">
-        <div class="col">
-              <div class="container">
-              <div class="card bg-light mb-3">
-              <div class="card-header"><h4 class="card-title">As Mobile Developer</h4></div>
-              <div class="card-body">
-              <div class="row">
-                      <div class="col-lg-4">
-                          <p class="skills-text">Programming Language</p>
-                          <ul class="list margin-b-30">
-                              <li><h5 class="skills-text-title">Android (Java)</h5></li>
-                              <li><h5 class="skills-text-title">Android (Kotlin)</h5></li>
-                              <li><h5 class="skills-text-title"> IOs (Swift)</h5></li>
-                              <li><h5 class="skills-text-title"> React Native</h5></li>
 
-                           </ul>
-                      </div>
-                        <!---->
-                        <div class="col-lg-4">
-                            <p class="skills-text">Tools & Other Tech Stacks</p>
-                            <ul class="list margin-b-30">
-                                <li><h5 class="skills-text-title"> Android Studio (Java & Kotlin) </h5></li>
-                                <li><h5 class="skills-text-title"> XCode 8(Swift 4)  & Higher (IOs) </h5></li>
-                                <li><h5 class="skills-text-title"> Xamarin - Visual Studio (Android & IOs) </h5></li>
-                                <li><h5 class="skills-text-title">Advance REST API</h5></li>
-                                <li><h5 class="skills-text-title">Postman</h5></li>
-                             </ul>
-                        </div>
-
-                        <!---->
-                        <div class="col-lg-4">
-                            <p class="skills-text"></p>
-                            <ul class="list margin-b-30">
-                                <li><h5 class="skills-text-title">Socket IO</h5></li>
-                                <li><h5 class="skills-text-title">StartApp</h5></li>
-                                <li><h5 class="skills-text-title">XML</h5></li>
-                                <li><h5 class="skills-text-title">AdMob</h5></li>
-                                <li><h5 class="skills-text-title">Composer</h5></li>
-                                <li><h5 class="skills-text-title">Firebase</h5></li>
-                             </ul>
-                        </div>
-                        <!---->
-
-               </div>
-               </div>
-               </div>
-               </div>
-
-               <!----><!----><!---->
-               <div class="container">
-               <div class="card bg-light mb-3">
-               <div class="card-header"><h4 class="card-title">As Web Developer</h4></div>
-               <div class="card-body">
-               <div class="row">
-                         <div class="col-lg-4">
-                             <p class="skills-text">Scripting Language</p>
-                             <ul class="list margin-b-30">
-                                 <li><h5 class="skills-text-title">HTML 5</h5></li>
-                                 <li><h5 class="skills-text-title">CSS 3</h5></li>
-                                 <li><h5 class="skills-text-title">Bootstrap</h5></li>
-                                 <li><h5 class="skills-text-title">JavaScript</h5></li>
-                                 <li><h5 class="skills-text-title">PHP 7.0</h5></li>
-                                 <li><h5 class="skills-text-title">React JS</h5></li>
-                                 <li><h5 class="skills-text-title">jQuery</h5></li>
-                             </ul>
-                         </div>
-                         <!---->
-                         <div class="col-lg-4">
-                             <p class="skills-text">Framework</p>
-                             <ul class="list margin-b-30">
-                                 <li><h5 class="skills-text-title">Laravel 6.1 (Web Development)</h5></li>
-                                 <li><h5 class="skills-text-title">Laravel 6.1 <i>  ( API Development [ Mobile & Web ] )</h5></i></li>
-                             </ul>
-
-                             <p class="skills-text">Tools</p>
-                             <ul class="list margin-b-30">
-                                 <li><h5 class="skills-text-title"><h5 class="skills-text-title">Notepad ++</h5></h5></li>
-                                 <li><h5 class="skills-text-title"><h5 class="skills-text-title">Sublime</h5></h5></li>
-                                 <li>Visul Studio</li>
-                                 <li>Atom</li>
-                             </ul>
-
-                         </div>
-                         <!---->
-                         <div class="col-lg-4">
-                           <p class="skills-text">Content Management System:</p>
-                           <ul class="list margin-b-30">
-                               <li><h5 class="skills-text-title">Joomla</h5></li>
-                               <li><h5 class="skills-text-title">WordPress</h5></li>
-                           </ul>
-
-                           <p class="skills-text">Server Management</p>
-                           <ul class="list margin-b-30">
-                               <li><h5 class="skills-text-title">Godaddy</h5></li>
-                           </ul>
-
-                             <p class="skills-text">Repository</p>
-                             <ul class="list margin-b-30">
-                                 <li><h5 class="skills-text-title">GitHub</h5></li>
-                                 <li><h5 class="skills-text-title">Bitbucket</h5></li>
-                             </ul>
-                         </div>
-
-
-
-                </div>
-                </div>
-                </div>
-                </div>
-                <!---->
-                <div class="container">
-                <div class="card bg-light mb-3">
-                <div class="card-header"><h4 class="card-title">Other Tech Stack Skills</h4></div>
-                <div class="card-body">
-                <div class="row">
-
-                      <div class="col-lg-4">
-                          <p class="skills-text">Database & Server</p>
-                          <ul class="list margin-b-30">
-                              <li>Windows (XP, 7, 8, 10, 11)</li>
-                              <li>MacOS 10.13.6(High Siera) and up</li>
-                              <li>Linux - Mint 18 ver</li>
-                          </ul>
-                          <p class="skills-text">Database & Server</p>
-                          <ul class="list margin-b-30">
-                                <li><h5 class="skills-text-title">MySQL (Maria DB)</h5></li>
-                                <li><h5 class="skills-text-title">SQLite (Database in Android)</h5></li>
-                                <li><h5 class="skills-text-title">Shared Preference(Database in Android)</h5></li>
-                                <li><h5 class="skills-text-title">Xammp (Tools)</h5></li>
-                                <li><h5 class="skills-text-title">Firebase (Server)</h5></li>
-                                <li><h5 class="skills-text-title">Google Play Console (Server)</h5></li>
-                                <li><h5 class="skills-text-title">Apple Dev (Server)</h5></li>
-                          </ul>
-                      </div>
-
-                      <div class="col-lg-4">
-                          <p class="skills-text">Repository</p>
-                          <ul class="list margin-b-30">
-                              <li><h5 class="skills-text-title">GitHub</h5></li>
-                              <li><h5 class="skills-text-title">Bitbucket</h5></li>
-                          </ul>
-                          <p class="skills-text">API</p>
-                          <ul class="list margin-b-30">
-                              <li><h5 class="skills-text-title"><h5 class="skills-text-title"> Android API libraries and other Third-party libraries</h5></h5></li>
-                              <li><h5 class="skills-text-title">PayPal</h5></li>
-                              <li><h5 class="skills-text-title"><h5 class="skills-text-title">Google (Map)</h5></h5></li>
-                              <li><h5 class="skills-text-title">Facebook</h5></li>
-                          </ul>
-                      </div>
-                      <!---->
-                      <div class="col-lg-4">
-                          <p class="skills-text">Webmaster tools:</p>
-                          <ul class="list margin-b-30">
-                              <li><h5 class="skills-text-title">AdSense</h5></li>
-                              <li><h5 class="skills-text-title">Google Analytics</h5></li>
-                              <li><h5 class="skills-text-title">AdMob</h5></li>
-                          </ul>
-
-                          <p class="skills-text">Desktop Application Developer</p>
-                          <ul class="list margin-b-30">
-                              <li><h5 class="skills-text-title">VB 6.0</h5></li>
-                              <li><h5 class="skills-text-title">VB . Net </h5></li>
-                          </ul>
-                      </div>
-
-                </div>
-                </div>
-                </div>
-                </div>
-                <!----><!----><!---->
-                <div class="container">
-                <div class="card bg-light mb-3">
-                <div class="card-header"><h4 class="card-title"></h4></div>
-                <div class="card-body">
-                <div class="row">
-                  <!---->
-                  <div class="col-lg-4">
-                        <p class="skills-text">Photo Editing</p>
-                        <ul class="list margin-b-30">
-                            <li><h5 class="skills-text-title">Adobe Photoshop</h5>(CS3, CS4, CS5, CS6, CC 2018)</li>
-                            <li><h5 class="skills-text-title">Adobe Lightroom Classic CC</h5></li>
-                            <li><h5 class="skills-text-title">Canva</h5></li>
-                        </ul>
-                  </div>
-                  <div class="col-lg-4">
-                      <p class="skills-text">Video Editing</p>
-                      <ul class="list margin-b-30">
-                          <li><h5 class="skills-text-title">Filmora</h5></li>
-                          <li><h5 class="skills-text-title">Final Cut Pro</h5></li>
-                          <li><h5 class="skills-text-title">Adobe After Effect CC 2017</h5></li>
-                          <li><h5 class="skills-text-title">Canva</h5></li>
-                      </ul>
-                  </div>
-
-                </div>
-                </div>
-                </div>
-                </div>
-                <!----><!----><!---->
-
-        </div>
-          <!-- <link rel="import" href="footer.html"> -->
-          <!-- <object data="footer.html"/> -->
-          <!-- <iframe src="footer.html"></iframe> -->
-          <!-- <link href="footer.html" rel="import" /> -->
-      </div>
-    </section>
-    <footer class="text-center">
-        <div class="footer-above">
-          <div class="container">
-            <div class="row">
-                    <div class="col col-lg-4">
-                        <h4>Location:</h4>
-                        <p>Caloocan City,Philippines</p>
-                        <a class="white-link" href="privacy-policy.html">Privacy Policy</a> | <a class="white-link" href="terms-and-conditions.html">Terms & Condition</a></br></br>
-                        <h4>Contact Me Via:</h4>
-                        <p>Email : <b>jpgrabador@gmail.com</b>
-                        </p>
-                        <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://www.paypal.me/jpgrabs" target ="blank">
-                          <i class="fa fa-fw fa-paypal"> </i><small> Donate with PayPal</small>
-                        </a>
-                    </div>
-
-                  <div class="col col-lg-8">
-                    <h4>Social Media Account</h4>
-                    <div class="col ml-4">
-                          <div class="row">
-                                <a class="footer-social-media mr-2" style ="text-decoration: none;"href="https://web.facebook.com/admingrabs" target ="blank">
-                                  <i class="fa fa-fw fa-facebook"> </i><small> Facebook</small>
-                                </a>
-                                <a class="footer-social-media mr-2" style ="text-decoration: none;"href="https://twitter.com/DmnGrabs" target ="blank">
-                                  <i class="fa fa-fw fa-twitter"> </i><small> Twitter</small>
-                                </a>
-                                <a class="footer-social-media mr-2" style ="text-decoration: none;"href="https://www.linkedin.com/in/john-paul-grabador-129816b9?trk" target ="blank">
-                                  <i class="fa fa-fw fa-linkedin"> </i><small> Linkedin</small>
-                                </a>
-                                <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://www.instagram.com/admingrabs/" target ="blank">
-                                  <i class="fa fa-fw fa-instagram"> </i><small> Instagram</small>
-                                </a>
-                          </div>
-                          <div class="row">
-                                <a class="footer-social-media mr-2" style ="text-decoration: none;"href="https://www.linkedin.com/in/john-paul-grabador-129816b9?trk" target ="blank">
-                                  <i class="fa fa-fw fa-linkedin"> </i><small> Linkedin</small>
-                                </a>
-                                <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://www.instagram.com/admingrabs/" target ="blank">
-                                  <i class="fa fa-fw fa-instagram"> </i><small> Instagram</small>
-                                </a>
-                                <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://github.com/jpgrabs" target ="blank">
-                                  <i class="fa fa-fw fa-github"> </i><small> Github</small>
-                                </a>
-                                <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://www.youtube.com/channel/UCDI8K9MSU1HwlFVR1p2tQgQ" target ="blank">
-                                  <i class="fa fa-fw fa-youtube"> </i><small> Youtube</small>
-                                </a>
-                          </div>
-                          <div class="row">
-                                <a class="footer-social-media mr-2" style ="text-decoration: none;"href="https://t.me/agcryptocommunity" target ="blank">
-                                  <i class="fa fa-fw fa-telegram"> </i><small> Telegram</small>
-                                </a>
-                                <a class="footer-social-media mr-2 mt-2" style ="text-decoration: none;"href="https://discord.gg/ZpMYcUJXHx" target ="blank">
-                                  <i class="fa fa-fw fa-discord"> </i><small> Discord</small>
-                                </a>
-                          </div>
-
-                    </div>
-                  </div>
-
+    <!-- ===== FEATURED WORK ===== -->
+    <section id="work" class="work-section fade-in">
+        <div class="section-head section-head--split">
+            <div>
+                <span class="eyebrow">Selected Work</span>
+                <h2>Featured projects</h2>
             </div>
-          </div>
-        </div>
-        <div class="footer-below">
-                Copyright &copy; John Paul Grabador 2017 - 2020
-        </div>
-        <!-- SCIPTS -->
-        <script src="./js/jquery/jquery.min.js"></script>
-        <script src="./js/popper/popper.min.js"></script>
-        <script src="./js/bootstrap/js/bootstrap.min.js"></script>
-        <!-- Plugin JavaScript -->
-        <script src="./js/jquery-easing/jquery.easing.min.js"></script>
-        <!-- Contact Form JavaScript -->
-        <script src="./js/jqBootstrapValidation.js"></script>
-        <!-- <script src="old/js/contact_me.js"></script> -->
-        <!-- Custom scripts for this template -->
-        <script src="./js/freelancer.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-        <div class="scroll-top d-lg-none">
-            <a class="btn btn-primary page-scroll" href="#page-top">
-                <i class="fa fa-chevron-up"></i>
+            <a href="tech-projects.html" class="head-link">
+                View all 33+ <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
         </div>
-    </footer>
 
+        <div class="work-grid">
+            <a href="kapartner-app-smart.html" class="work-card work-card--lg">
+                <div class="work-thumb">
+                    <img src="images/proj-logo/ic_kapartner.png" alt="Ka-Partner App" loading="lazy">
+                </div>
+                <div class="work-meta">
+                    <span class="work-tag">Featured · Android · Smart / MultiSys</span>
+                    <h3>Ka-Partner App (Smart DMS)</h3>
+                    <p>Retailer mobile app for Smart Communications — load wallet, suki list, secure transactions, and an end-to-end loading business toolkit. Live on Google Play since 2020.</p>
+                    <span class="work-date">May 2020 – Present</span>
+                </div>
+            </a>
 
-  </body>
+            <a href="paybox.html" class="work-card">
+                <div class="work-thumb">
+                    <img src="images/proj-logo/ic_paybox.png" alt="Paybox" loading="lazy">
+                </div>
+                <div class="work-meta">
+                    <span class="work-tag">Android · PLDT Smart</span>
+                    <h3>Paybox</h3>
+                    <p>Automated kiosk app for self-service bills, utilities, and government payments.</p>
+                    <span class="work-date">April 2022 – Present</span>
+                </div>
+            </a>
 
+            <a href="almusalita-app.html" class="work-card">
+                <div class="work-thumb">
+                    <img src="images/proj-logo/ic_almusalita.png" alt="AlmuSalita" loading="lazy">
+                </div>
+                <div class="work-meta">
+                    <span class="work-tag">Android · Faith</span>
+                    <h3>AlmuSalita</h3>
+                    <p>Daily Catholic spiritual companion with offline Bible study and guides.</p>
+                    <span class="work-date">Jan 2018 – 2021</span>
+                </div>
+            </a>
+
+            <a href="phonepera.html" class="work-card">
+                <div class="work-thumb">
+                    <img src="images/proj-logo/ic_phoneperav2.png" alt="PhonePera" loading="lazy">
+                </div>
+                <div class="work-meta">
+                    <span class="work-tag">Android · AiPayGo</span>
+                    <h3>PhonePera</h3>
+                    <p>Fast e-wallet for bills payment, management, and P2P transactions.</p>
+                    <span class="work-date">Jan 2019 – May 2019</span>
+                </div>
+            </a>
+
+            <a href="roamadex.html" class="work-card">
+                <div class="work-thumb">
+                    <img src="images/proj-logo/ic_roamadex.png" alt="Roamadex" loading="lazy">
+                </div>
+                <div class="work-meta">
+                    <span class="work-tag">Android · Travel</span>
+                    <h3>Roamadex</h3>
+                    <p>Travel &amp; local discovery platform with ad placement for ride-share drivers.</p>
+                    <span class="work-date">Sept 2018 – March 2020</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE TIMELINE ===== -->
+    <section id="experience" class="experience-section fade-in">
+        <div class="section-head">
+            <span class="eyebrow">Experience</span>
+            <h2>Where I've worked</h2>
+            <p>7+ years of building products and managing brands across tech and creative roles.</p>
+        </div>
+
+        <ol class="timeline">
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">May 2020 – Present</span>
+                        <span class="timeline-pill">Current</span>
+                    </div>
+                    <h3>Android Developer</h3>
+                    <p class="timeline-org">Multisys Technologies Corporation</p>
+                    <p>Lead Android development for the Ka-Partner App (Smart DMS) and Paybox kiosk machine app — Kotlin, REST APIs, secure transaction flows.</p>
+                </div>
+            </li>
+
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">June 2022 – Present</span>
+                        <span class="timeline-pill">Side</span>
+                    </div>
+                    <h3>Community Manager</h3>
+                    <p class="timeline-org">Coins.PH</p>
+                    <p>Manage Telegram (Announcements + Community) and Discord channels — driving engagement, moderation, and crypto literacy.</p>
+                </div>
+            </li>
+
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Oct 2017 – Present</span>
+                        <span class="timeline-pill">Side</span>
+                    </div>
+                    <h3>Social Media Manager</h3>
+                    <p class="timeline-org">AlmuSalita · Our Lady of Lourdes Parish</p>
+                    <p>End-to-end social media management — Facebook, Instagram, Twitter, and Linktree presence for faith-based communities.</p>
+                </div>
+            </li>
+
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Sept 2018 – March 2020</span>
+                    </div>
+                    <h3>Android &amp; Back-End Developer</h3>
+                    <p class="timeline-org">AiPayGo Inc. · Republisys Inc.</p>
+                    <p>Shipped Roamadex, HyperPocket, RealMark (RPMC), PhonePera, CheckApps, and TryC — plus back-end work for Republisys and RealMark Web.</p>
+                </div>
+            </li>
+
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-meta">
+                        <span class="timeline-date">Sept 2015 – Dec 2017</span>
+                    </div>
+                    <h3>Android Developer</h3>
+                    <p class="timeline-org">Stardibs Corp</p>
+                    <p>Built Spottapark, iPostMo, Prop, MPOS, Ride, and Autozon — parking, ride-hailing, and e-commerce mobile applications.</p>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <!-- ===== STORY / DUAL ===== -->
+    <section id="story" class="story-section fade-in">
+        <div class="section-head">
+            <span class="eyebrow">The Story</span>
+            <h2>Two crafts. One mindset.</h2>
+        </div>
+        <div class="story-grid">
+            <article class="story-card">
+                <span class="story-num">01</span>
+                <h3>Tech Professional</h3>
+                <p>I design and develop mobile and web applications with a focus on clean code, intuitive UI, and seamless user experience. Android in Kotlin and Java, full-stack web, REST integrations — every product I build aims to be both functional and engaging.</p>
+                <div class="story-tags">
+                    <span>Kotlin</span><span>Java</span><span>Jetpack Compose</span><span>REST</span><span>Git</span><span>PHP / MySQL</span>
+                </div>
+            </article>
+            <article class="story-card story-card--alt">
+                <span class="story-num">02</span>
+                <h3>Content Creator &amp; SMM</h3>
+                <p>I craft visuals and narratives that connect with audiences — from filming and editing reels to designing event promos and managing brand presence. Past work with The Cliffhanger Studios, Make or Bake, AlmuSalita, SOCCOMM OLLP, and Coins.PH.</p>
+                <div class="story-tags">
+                    <span>Photography</span><span>Videography</span><span>Canva</span><span>Strategy</span><span>Community</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== BRANDS / PARTNERS ===== -->
+    <section class="brands-section fade-in">
+        <div class="section-head">
+            <span class="eyebrow">Trusted by</span>
+            <h2>Brands &amp; partners I've worked with</h2>
+        </div>
+        <div class="brands-list">
+            <span>Smart Communications</span>
+            <span>MultiSys</span>
+            <span>PLDT</span>
+            <span>AiPayGo Inc.</span>
+            <span>Republisys Inc.</span>
+            <span>Stardibs Corp</span>
+            <span>RealMark</span>
+            <span>Coins.PH</span>
+            <span>AlmuSalita</span>
+            <span>The Cliffhanger Studios</span>
+            <span>Make or Bake</span>
+            <span>OLFU</span>
+        </div>
+    </section>
+
+    <!-- ===== CREDENTIALS ===== -->
+    <section id="certs" class="certs-section fade-in">
+        <div class="section-head">
+            <span class="eyebrow">Credentials</span>
+            <h2>Always learning</h2>
+            <p>Selected certifications and continuing education across tech and creative disciplines.</p>
+        </div>
+
+        <div class="certs-grid">
+            <div class="cert-col">
+                <h4 class="cert-heading"><i class="fa-solid fa-microchip" aria-hidden="true"></i> Tech</h4>
+                <ul class="cert-list">
+                    <li><b>Ethical Hacking &amp; Bug Bounty</b><span>Udemy · Feb 2023</span></li>
+                    <li><b>Data Analytics with SQL &amp; Python</b><span>Refocus Digital Academy · July 2022</span></li>
+                    <li><b>Android Completion</b><span>EDUCBA · June 2022</span></li>
+                    <li><b>Master of Fundamentals in Cryptocurrencies</b><span>NasAcademy · June 2022</span></li>
+                    <li><b>Digital Marketing Planning</b><span>MSME Carazan · Google Program · Sept 2021</span></li>
+                    <li><b>Data Protection &amp; Privacy Workshop</b><span>Multisys Technologies · July 2021</span></li>
+                </ul>
+            </div>
+
+            <div class="cert-col">
+                <h4 class="cert-heading"><i class="fa-solid fa-palette" aria-hidden="true"></i> Creative &amp; Social</h4>
+                <ul class="cert-list">
+                    <li><b>Catholic Social Media Summit (v8)</b><span>Recognition · Nov 2019</span></li>
+                    <li><b>Adobe Premiere Pro Video Editing</b><span>ALPAS · June 2020</span></li>
+                    <li><b>Design 101 using Canva</b><span>ALPAS · June 2020</span></li>
+                    <li><b>Photo Editing (Adobe Lightroom)</b><span>ALPAS · June 2020</span></li>
+                    <li><b>Social Media Ground Up</b><span>ALPAS · June 2020</span></li>
+                    <li><b>OBS Video Courseware</b><span>Habi Web Technologies · June 2020</span></li>
+                </ul>
+            </div>
+
+            <div class="cert-col">
+                <h4 class="cert-heading"><i class="fa-solid fa-mountain-sun" aria-hidden="true"></i> Beyond Work</h4>
+                <ul class="cert-list">
+                    <li><b>Mt. Apo Climb</b><span>April 2018</span></li>
+                    <li><b>Mt. Tapulao Climb</b><span>February 2018</span></li>
+                    <li><b>Montalban Grand Traverse</b><span>October 2017</span></li>
+                    <li><b>Basic Mountaineering Course</b><span>August 2017</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TUTORIALS ===== -->
+    <section id="tutorials" class="tutorials-section fade-in">
+        <div class="section-head section-head--split">
+            <div>
+                <span class="eyebrow">Sharing the craft</span>
+                <h2>Android tutorials</h2>
+                <p style="max-width:560px;">Short, focused write-ups from when I was teaching Android fundamentals — code, screenshots, and step-by-step explanations.</p>
+            </div>
+            <a href="tutorials.html" class="head-link">
+                All tutorials <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="tutorials-grid">
+            <a href="tutorial/android-splash-tutorial.html" class="tutorial-card">
+                <div class="tutorial-tag">Java · Beginner</div>
+                <h3>Android Splash Screen</h3>
+                <p>Build a clean Android splash screen using Android Studio &amp; Java — the right way.</p>
+                <span class="tutorial-date">May 17, 2020</span>
+            </a>
+            <a href="tutorial/android-tutorial-button-click.html" class="tutorial-card">
+                <div class="tutorial-tag">Kotlin · Beginner</div>
+                <h3>Button Click using Kotlin</h3>
+                <p>Hook up your first interactive button — Android Studio + Kotlin, no fluff.</p>
+                <span class="tutorial-date">May 21, 2020</span>
+            </a>
+            <a href="tutorial/android-tutorial-circle-image.html" class="tutorial-card">
+                <div class="tutorial-tag">Kotlin · UI</div>
+                <h3>How to make a Circle Image</h3>
+                <p>Render a perfectly round image in Android using Kotlin — drawable hacks &amp; libraries.</p>
+                <span class="tutorial-date">June 7, 2020</span>
+            </a>
+            <a href="tutorial/android-tutorial-curve-button.html" class="tutorial-card">
+                <div class="tutorial-tag">Kotlin · UI</div>
+                <h3>How to make a Curve Button</h3>
+                <p>Drawable-only curved buttons in Kotlin — clean, lightweight, and reusable.</p>
+                <span class="tutorial-date">June 10, 2020</span>
+            </a>
+            <a href="tutorial/android-tutorial-web-view.html" class="tutorial-card">
+                <div class="tutorial-tag">Kotlin · WebView</div>
+                <h3>Load URL inside a WebView</h3>
+                <p>Embed any URL into your Android app with WebView — Kotlin, the right setup.</p>
+                <span class="tutorial-date">June 13, 2020</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section fade-in">
+        <div class="cta-inner">
+            <span class="eyebrow">Let's collaborate</span>
+            <h2 class="cta-title">Have a project in mind?</h2>
+            <p class="cta-sub">Whether you need an app built, a brand to grow, or a story told — let's make something memorable together.</p>
+            <div class="cta-actions">
+                <a href="mailto:jpgrabador@gmail.com" class="btn btn--primary">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                    Start a conversation
+                </a>
+                <a href="#contact" class="btn btn--ghost">View contact info</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer id="contact" class="fade-in">
+    <div>
+        <h4>Email</h4>
+        <p><a href="mailto:jpgrabador@gmail.com">jpgrabador@gmail.com</a></p>
+        <p style="margin-top:6px;">Caloocan City, Philippines</p>
+    </div>
+    <div>
+        <h4>Follow Me</h4>
+        <div class="social-icons">
+            <a href="https://web.facebook.com/grabsmedia" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/grabsmediahub/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@grabsmedia" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/in/john-paul-grabador-129816b9" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/DmnGrabs" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/crealix" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/channel/UCDI8K9MSU1HwlFVR1p2tQgQ" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <div>
+        <h4>Info</h4>
+        <p><a href="#">Privacy Policy</a> &middot; <a href="#">Terms &amp; Conditions</a></p>
+        <p style="margin-top:8px;">&copy; <span id="year">2026</span> John Paul Grabador</p>
+    </div>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <span id="close" role="button" aria-label="Close image viewer">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- Back to Top -->
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
 </html>

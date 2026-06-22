@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Android tutorials by JP Grabador — short, practical write-ups on Android, Kotlin, and Jetpack basics.">
+    <meta name="author" content="John Paul Grabador">
+    <meta name="theme-color" content="#0F172A">
+    <meta name="robots" content="index,follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Android Tutorials — JP Grabador">
+    <meta property="og:description" content="Focused Android tutorials covering splash screens, buttons, images, and WebView.">
+
+    <title>Android Tutorials — JP Grabador</title>
+
+    <link rel="icon" href="images/img_dp_main_thumbnail.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar" aria-label="Primary">
+        <div class="nav-container">
+            <a href="index.html" class="nav-title">JP <span class="nav-dot"></span> Grabs</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tech-projects.html">Tech Projects</a></li>
+                <li><a href="tutorials.html" class="active">Tutorials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="tutorials-section fade-in" style="padding-top: clamp(64px, 8vw, 100px);">
+        <div class="section-head">
+            <span class="eyebrow">Sharing the craft</span>
+            <h2>Android Tutorials</h2>
+            <p>Short, practical guides from 2020 — splash screens, buttons, UI tricks, and WebView basics in Kotlin and Java.</p>
+        </div>
+
+        <div class="tutorials-grid">
+            <a href="tutorial/android-splash-tutorial.html" class="tutorial-card">
+                <div class="tutorial-num">01</div>
+                <div class="tutorial-tag">Java · Beginner</div>
+                <h3>Android Splash Screen Tutorial</h3>
+                <p>The right way to build a clean Android splash screen using Android Studio &amp; Java.</p>
+                <span class="tutorial-date">May 17, 2020</span>
+            </a>
+
+            <a href="tutorial/android-tutorial-button-click.html" class="tutorial-card">
+                <div class="tutorial-num">02</div>
+                <div class="tutorial-tag">Kotlin · Beginner</div>
+                <h3>Button Click using Kotlin</h3>
+                <p>Wire up your first interactive button in Android Studio with Kotlin — no fluff, just the essentials.</p>
+                <span class="tutorial-date">May 21, 2020</span>
+            </a>
+
+            <a href="tutorial/android-tutorial-circle-image.html" class="tutorial-card">
+                <div class="tutorial-num">03</div>
+                <div class="tutorial-tag">Kotlin · UI</div>
+                <h3>How to make a Circle Image</h3>
+                <p>Render a perfectly round image in Android — drawable shape tricks and library options compared.</p>
+                <span class="tutorial-date">June 7, 2020</span>
+            </a>
+
+            <a href="tutorial/android-tutorial-curve-button.html" class="tutorial-card">
+                <div class="tutorial-num">04</div>
+                <div class="tutorial-tag">Kotlin · UI</div>
+                <h3>How to make a Curve Button</h3>
+                <p>Drawable-only curved buttons in Kotlin — clean, lightweight, and easy to reuse across screens.</p>
+                <span class="tutorial-date">June 10, 2020</span>
+            </a>
+
+            <a href="tutorial/android-tutorial-web-view.html" class="tutorial-card">
+                <div class="tutorial-num">05</div>
+                <div class="tutorial-tag">Kotlin · WebView</div>
+                <h3>Load URL inside a WebView</h3>
+                <p>Embed any URL into your Android app with WebView — the right Kotlin setup and the gotchas to avoid.</p>
+                <span class="tutorial-date">June 13, 2020</span>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer id="contact" class="fade-in">
+    <div>
+        <h4>Email</h4>
+        <p><a href="mailto:jpgrabador@gmail.com">jpgrabador@gmail.com</a></p>
+    </div>
+    <div>
+        <h4>Follow Me</h4>
+        <div class="social-icons">
+            <a href="https://web.facebook.com/grabsmedia" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/grabsmediahub/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@grabsmedia" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/in/john-paul-grabador-129816b9" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/crealix" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    <div>
+        <h4>Info</h4>
+        <p><a href="#">Privacy Policy</a> &middot; <a href="#">Terms &amp; Conditions</a></p>
+    </div>
+</footer>
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+</body>
+</html>
