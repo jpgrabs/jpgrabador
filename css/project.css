@@ -248,8 +248,13 @@ main.container {
 /* ---------- Related Projects ---------- */
 .related-projects .related-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(14px, 2vw, 22px);
+}
+@media (max-width: 640px) {
+  .related-projects .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .related-item {
