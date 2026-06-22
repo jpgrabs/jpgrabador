@@ -926,11 +926,13 @@ footer a:hover { color: var(--accent); }
   border-color: var(--ink);
   color: var(--surface);
 }
-.service-card--accent h3,
-.service-card--accent p,
-.service-card--accent .service-list li { color: var(--surface); }
-.service-card--accent .service-num { color: var(--accent); }
-.service-card--accent .service-icon { color: var(--accent); }
+.service-card.service-card--accent h3,
+.service-card.service-card--accent > p,
+.service-card.service-card--accent .service-list li { color: #ffffff; }
+.service-card.service-card--accent .service-list li::before { color: #ffffff; }
+.service-card.service-card--accent .service-list { border-top-color: rgba(255, 255, 255, 0.18); }
+.service-card.service-card--accent .service-num { color: var(--accent); }
+.service-card.service-card--accent .service-icon { color: var(--accent); }
 
 .service-num {
   font-family: "Instrument Serif", serif;
