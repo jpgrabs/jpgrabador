@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tech projects by JP Grabador — mobile apps, web projects, and automation work.">
+    <meta name="description" content="Tech projects by JP Grabador — Android apps, web platforms, and desktop tools shipped across 7+ years.">
     <meta name="author" content="John Paul Grabador">
     <meta name="theme-color" content="#0F172A">
     <meta name="robots" content="index,follow">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tech Projects — JP Grabador">
-    <meta property="og:description" content="A collection of mobile and web projects built by JP Grabador.">
+    <meta property="og:description" content="A collection of Android, web, and desktop projects built by JP Grabador.">
 
     <title>Tech Projects — JP Grabador</title>
 
     <link rel="icon" href="images/img_dp_main_thumbnail.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
@@ -28,11 +28,11 @@
 <header>
     <nav class="navbar" aria-label="Primary">
         <div class="nav-container">
-            <a href="index.html" class="nav-title">JP Grabs</a>
+            <a href="index.html" class="nav-title">JP <span class="nav-dot"></span> Grabs</a>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tech-projects.html" class="active">Tech Projects</a></li>
-                <li><a href="index.html#creative-projects">Creative</a></li>
+                <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
             <button class="hamburger" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
@@ -45,27 +45,35 @@
 </header>
 
 <main>
-    <section id="tech-projects" class="light-section fade-in">
-        <div class="section-head">
+
+    <!-- HERO -->
+    <section class="projects-hero">
+        <div class="projects-hero-inner">
             <span class="eyebrow">Selected Work</span>
-            <h2>Tech Projects</h2>
-            <p>Mobile apps, web platforms, and automation work I've shipped.</p>
+            <h1 class="projects-title">Tech Projects</h1>
+            <p class="projects-sub">33+ projects shipped over 7+ years — Android apps, web platforms, and desktop tools for clients like Smart, MultiSys, AiPayGo, Republisys, and Stardibs.</p>
+
+            <div id="projects-filter" class="projects-filter" role="tablist" aria-label="Filter projects by category"></div>
         </div>
-        <div class="gallery" id="projects-gallery"></div>
     </section>
+
+    <!-- CATEGORY SECTIONS rendered into this container -->
+    <div id="projects-categorized"></div>
+
 </main>
 
 <footer id="contact" class="fade-in">
     <div>
         <h4>Email</h4>
-        <p><a href="mailto:contact@jpgrabs.com">contact@jpgrabs.com</a></p>
+        <p><a href="mailto:jpgrabador@gmail.com">jpgrabador@gmail.com</a></p>
     </div>
     <div>
         <h4>Follow Me</h4>
         <div class="social-icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://web.facebook.com/admingrabs" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/admingrabs/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/john-paul-grabador-129816b9" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/jpgrabs" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
     </div>
     <div>
