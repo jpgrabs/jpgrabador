@@ -3,56 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Projects</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta name="description" content="Tech projects by JP Grabador — mobile apps, web projects, and automation work.">
+    <meta name="author" content="John Paul Grabador">
+    <meta name="theme-color" content="#0F172A">
+    <meta name="robots" content="index,follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tech Projects — JP Grabador">
+    <meta property="og:description" content="A collection of mobile and web projects built by JP Grabador.">
+
+    <title>Tech Projects — JP Grabador</title>
+
+    <link rel="icon" href="images/img_dp_main_thumbnail.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <script src="js/dynamic-project-list.js" defer></script>
-    <!-- <script src="js/disable-right-click.js" defer></script> -->
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
+<header>
+    <nav class="navbar" aria-label="Primary">
         <div class="nav-container">
-            <!-- <div class="nav-title">JP Grabs</div> -->
-            <div class="hamburger" id="hamburger">&#9776;</div>
+            <a href="index.html" class="nav-title">JP Grabs</a>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tech-projects.html" class="active">Tech Projects</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#creative-projects">Creative</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
+            <button class="hamburger" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
-    <!-- Tech Projects Section -->
-    <section id="tech-projects" class="light-section">
-        <h2>Tech Projects</h2>
+</header>
+
+<main>
+    <section id="tech-projects" class="light-section fade-in">
+        <div class="section-head">
+            <span class="eyebrow">Selected Work</span>
+            <h2>Tech Projects</h2>
+            <p>Mobile apps, web platforms, and automation work I've shipped.</p>
+        </div>
         <div class="gallery" id="projects-gallery"></div>
     </section>
+</main>
 
+<footer id="contact" class="fade-in">
+    <div>
+        <h4>Email</h4>
+        <p><a href="mailto:contact@jpgrabs.com">contact@jpgrabs.com</a></p>
+    </div>
+    <div>
+        <h4>Follow Me</h4>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div>
+        <h4>Info</h4>
+        <p><a href="#">Privacy Policy</a> &middot; <a href="#">Terms &amp; Conditions</a></p>
+    </div>
+</footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop">↑</button>
-
-    <!-- Footer -->
-    <footer id="contact" class="fade-in">
-            <div>
-                <h4>Email</h4>
-                <p>contact@jpgrabs.com</p>
-            </div>
-            <div>
-                <h4>Follow Me</h4>
-                <div class="social-icons">
-                  <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                  <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div>
-                <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
-            </div>
-    </footer>
+<button id="backToTop" aria-label="Back to top">↑</button>
 
 </body>
 </html>

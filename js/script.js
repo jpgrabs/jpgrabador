@@ -2,59 +2,54 @@
    Portfolio — script.js
    - Hamburger toggle (mobile)
    - Smooth scrolling for anchors
-   - Navbar active link highlight
-   - Split section intersection-triggered animation
-   - Back-to-top button
+   - Active nav link on scroll
+   - Split section reveal (IntersectionObserver)
+   - Fade-in reveal
+   - Back-to-top
+   - Lightbox
    ----------------------------- */
 
 document.addEventListener("DOMContentLoaded", () => {
-  /* ---------- elements ---------- */
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  const header = document.querySelector('header');
-  // we'll create a mobile nav container dynamically (simple)
-  let mobileNav = null;
-
   /* ---------- Hamburger Toggle ---------- */
-  if (hamburger) {
-    hamburger.addEventListener('click', () => {
-      // toggle a class to show/hide nav-links for mobile
-      header.classList.toggle('nav-open');
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks  = document.querySelector('.nav-links');
 
-      // create/destroy a small mobile nav panel for accessibility
-      if (!mobileNav) {
-        mobileNav = document.createElement('div');
-        mobileNav.className = 'mobile-nav';
-        // clone links into mobile nav
-        const links = document.querySelectorAll('.nav-links a');
-        links.forEach(a => {
-          const a2 = document.createElement('a');
-          a2.href = a.href;
-          a2.textContent = a.textContent;
-          a2.addEventListener('click', () => {
-            // close nav after click
-            header.classList.remove('nav-open');
-            setTimeout(() => mobileNav && mobileNav.remove(), 200);
-          });
-          mobileNav.appendChild(a2);
-        });
-        header.after(mobileNav);
-      } else {
-        // toggle display
-        if (header.classList.contains('nav-open')) {
-          mobileNav.style.display = 'block';
-        } else {
-          mobileNav.style.display = 'none';
-        }
+  if (hamburger && navLinks) {
+    hamburger.setAttribute('role', 'button');
+    hamburger.setAttribute('aria-label', 'Toggle navigation');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('tabindex', '0');
+
+    const toggleNav = () => {
+      const open = navLinks.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
+    hamburger.addEventListener('click', toggleNav);
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleNav(); }
+    });
+
+    // Close on outside click / Escape
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !hamburger.contains(e.target) && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
       }
     });
 
-    // hide mobile nav when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!header.contains(e.target) && header.classList.contains('nav-open')) {
-        header.classList.remove('nav-open');
-        if (mobileNav) mobileNav.style.display = 'none';
-      }
+    // Close after picking a link
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
@@ -62,134 +57,96 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
       const href = a.getAttribute('href');
-      if (href.length > 1 && document.querySelector(href)) {
-        e.preventDefault();
-        document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (href.length > 1) {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     });
   });
 
-  /* ---------- Navbar active on scroll ---------- */
-  const navAnchorLinks = Array.from(document.querySelectorAll('.nav-links a'));
-  const sections = navAnchorLinks.map(l => {
-    try { return document.querySelector(l.getAttribute('href')) } catch(e){ return null }
-  }).filter(Boolean);
+  /* ---------- Active nav highlight ---------- */
+  const navAnchorLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+  const sections = navAnchorLinks
+    .map(l => { try { return document.querySelector(l.getAttribute('href')); } catch (_) { return null; } })
+    .filter(Boolean);
 
-  function updateActiveNav() {
-    const pos = window.scrollY + (window.innerHeight / 3);
-    let idx = -1;
-    sections.forEach((sec, i) => {
-      if (sec.offsetTop <= pos) idx = i;
-    });
-    navAnchorLinks.forEach((link, i) => {
-      link.classList.toggle('active', i === idx);
-    });
+  if (sections.length) {
+    const updateActive = () => {
+      const pos = window.scrollY + window.innerHeight / 3;
+      let idx = -1;
+      sections.forEach((sec, i) => { if (sec.offsetTop <= pos) idx = i; });
+      navAnchorLinks.forEach((link, i) => link.classList.toggle('active', i === idx));
+    };
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
   }
-  window.addEventListener('scroll', updateActiveNav, { passive: true });
-  updateActiveNav();
 
-  /* ---------- Split section animation (IntersectionObserver) ---------- */
-  const left = document.querySelector('.split-left');
-  const right = document.querySelector('.split-right');
-
-  if (left && right) {
+  /* ---------- Reveal animations (split + fade-in) ---------- */
+  const revealEls = document.querySelectorAll('.split, .fade-in');
+  if ('IntersectionObserver' in window && revealEls.length) {
     const io = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
+          entry.target.classList.add('in-view', 'show');
+          io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.22 });
+    }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
 
-    io.observe(left);
-    io.observe(right);
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in-view', 'show'));
   }
 
-  /* ---------- Back to Top button ---------- */
+  /* ---------- Back to Top ---------- */
   const backBtn = document.getElementById('backToTop');
   if (backBtn) {
-    // show after user scrolled some distance
-    window.addEventListener('scroll', () => {
+    backBtn.setAttribute('aria-label', 'Back to top');
+    const onScroll = () => {
       if (window.scrollY > 420) backBtn.classList.add('show');
       else backBtn.classList.remove('show');
-    }, { passive: true });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
 
     backBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
-  /* ---------- small accessibility tweak: keyboard close for mobile nav ---------- */
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      if (header.classList.contains('nav-open')) {
-        header.classList.remove('nav-open');
-        if (mobileNav) mobileNav.style.display = 'none';
-      }
-    }
-  });
+  /* ---------- Lightbox ---------- */
+  const lightbox    = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn    = document.getElementById('close');
 
-});
-
-// Navbar Hamburger Toggle
-document.addEventListener("DOMContentLoaded", function() {
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-
-    hamburger.addEventListener("click", function() {
-        navLinks.classList.toggle("active");
+  if (lightbox && lightboxImg) {
+    document.querySelectorAll('.gallery img').forEach(img => {
+      // Skip images wrapped in links (those navigate elsewhere)
+      if (img.closest('a')) return;
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || '';
+        document.body.style.overflow = 'hidden';
+      });
     });
-});
 
+    const closeLightbox = () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    };
 
-// Scroll animations
-const fadeEls = document.querySelectorAll(".fade-in");
-window.addEventListener("scroll", () => {
-    fadeEls.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-            el.classList.add("show");
-        }
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) closeLightbox();
     });
-});
-
-// Back to Top button
-const backToTop = document.getElementById("backToTop");
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        backToTop.style.display = "block";
-    } else {
-        backToTop.style.display = "none";
-    }
-});
-
-backToTop.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.style.display === 'flex') closeLightbox();
     });
-});
-
-// Lightbox functionality
-const galleryImages = document.querySelectorAll(".gallery img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const closeBtn = document.getElementById("close");
-
-galleryImages.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
-  });
-});
-
-closeBtn.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-
-lightbox.addEventListener("click", (e) => {
-  if (e.target !== lightboxImg) {
-    lightbox.style.display = "none";
   }
 });
-

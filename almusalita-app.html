@@ -1,181 +1,174 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Daily Catholic Spiritual Companion Mobile app">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AlmuSalita — Daily Catholic Spiritual Companion mobile app. Project case study by JP Grabador.">
     <meta name="author" content="John Paul Grabador">
+    <meta name="theme-color" content="#0F172A">
     <meta name="robots" content="index,follow">
-    <meta property="og:url" content="{{url()->current()}}">
+
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/proj-logo/ic_almusalita.png">
-    <meta property="og:site_name" content="AlmuSalita App" >
-    <meta property="og:image:width" content="1200" >
-    <meta property="og:image:height" content="630" >
-    <meta property="og:title" content="AlmuSalita" >
-      <!-- <meta property="fb:app_id" content="2573568509320915"> -->
-    <title>AlmuSalita</title>
-    <link href="images/proj-logo/ic_almusalita.png" rel="icon">
-    <link href="images/proj-logo/ic_almusalita.png" rel="apple-touch-icon">
+    <meta property="og:site_name" content="AlmuSalita App">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="AlmuSalita — JP Grabador">
+    <meta property="og:description" content="Daily Catholic Spiritual Companion mobile app — case study.">
+
+    <title>AlmuSalita — JP Grabador</title>
+
+    <link rel="icon" href="images/proj-logo/ic_almusalita.png">
+    <link rel="apple-touch-icon" href="images/proj-logo/ic_almusalita.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="css/project.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="js/script.js" defer></script>
-    <script src="js/project.js"></script>
+    <script src="js/project.js" defer></script>
     <script src="js/disable-right-click.js" defer></script>
 </head>
 <body>
-  <body>
-  <nav class="navbar">
-      <div class="nav-container">
-          <div class="spacer"></div> <!-- pushes title/hamburger to right -->
-          <div class="nav-right">
-              <!-- <h1 class="nav-title">JP Grabs</h1> -->
-              <div class="hamburger">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-              </div>
-          </div>
-          <ul class="nav-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="tech-projects.html" class="active">Tech Projects</a></li>
-              <li><a href="#creative-projects">Creative Projects</a></li>
-              <li><a href="about.html">About</a></li>
-          </ul>
-      </div>
-  </nav>
-    <main class="container">
-      <!-- Project Title -->
-      <h3 class="project-title">AlmuSalita App</h3>
 
-      <!-- Screenshot Slider/Carousel -->
-      <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
-        <!-- Indicators -->
+<header>
+    <nav class="navbar" aria-label="Primary">
+        <div class="nav-container">
+            <a href="index.html" class="nav-title">JP Grabs</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tech-projects.html" class="active">Tech Projects</a></li>
+                <li><a href="index.html#creative-projects">Creative</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+
+    <h1 class="project-title">AlmuSalita <small style="color:var(--muted); font-weight:400;">App</small></h1>
+
+    <!-- Screenshot Carousel -->
+    <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-          <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2"></button>
-          <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="3"></button>
-          <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
-
-        <!-- Slides -->
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/slider/scalmusalitaapp1.png" class="d-block w-100" alt="Slide 1">
-          </div>
-          <div class="carousel-item">
-            <img src="images/slider/scalmusalitaapp2.png" class="d-block w-100" alt="Slide 2">
-          </div>
-          <div class="carousel-item">
-            <img src="images/slider/scalmusalitaapp3.png" class="d-block w-100" alt="Slide 3">
-          </div>
-          <div class="carousel-item">
-            <img src="images/slider/scalmusalitaapp4.png" class="d-block w-100" alt="Slide 3">
-          </div>
-          <div class="carousel-item">
-            <img src="images/slider/scalmusalitaapp5.png" class="d-block w-100" alt="Slide 3">
-          </div>
+            <div class="carousel-item active"><img src="images/slider/scalmusalitaapp1.png" class="d-block w-100" alt="AlmuSalita screen 1"></div>
+            <div class="carousel-item"><img src="images/slider/scalmusalitaapp2.png" class="d-block w-100" alt="AlmuSalita screen 2"></div>
+            <div class="carousel-item"><img src="images/slider/scalmusalitaapp3.png" class="d-block w-100" alt="AlmuSalita screen 3"></div>
+            <div class="carousel-item"><img src="images/slider/scalmusalitaapp4.png" class="d-block w-100" alt="AlmuSalita screen 4"></div>
+            <div class="carousel-item"><img src="images/slider/scalmusalitaapp5.png" class="d-block w-100" alt="AlmuSalita screen 5"></div>
         </div>
-
-        <!-- Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-          <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-          <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
+    </div>
 
+    <!-- Project Meta -->
+    <dl class="project-meta">
+        <div>
+            <dt>Service</dt>
+            <dd>Android Mobile Development</dd>
+        </div>
+        <div>
+            <dt>Client</dt>
+            <dd>AlmuSalita</dd>
+        </div>
+        <div>
+            <dt>Type</dt>
+            <dd>Project Based</dd>
+        </div>
+        <div>
+            <dt>Development</dt>
+            <dd>January 2018 – 2021</dd>
+        </div>
+    </dl>
 
+    <!-- Description -->
+    <section class="description">
+        <h2>Project Description</h2>
+        <p>
+            <b>Daily Catholic Spiritual Companion Mobile app</b> — <i>Catholic Mobile app.</i><br>
+            <i>In our continuous journey of making the Word of God viral for the Filipino worldwide through creating a global cyber-community that evangelizes and connects people closer to God, we need your time, treasure, and talent in making this vision into reality.</i>
+        </p>
+        <p><b>Features</b></p>
+        <ul style="padding-left: 20px; color: var(--ink-soft); line-height: 1.9;">
+            <li>Offline reading for Bible Study — Old &amp; New Testament</li>
+            <li>Bible Study Guide</li>
+            <li>Catholic 101</li>
+            <li>Basic Catholic Faith</li>
+            <li>And more spiritual companion tools</li>
+        </ul>
 
-          <!-- Description -->
-          <section class="description">
-            </br><h2 class="text-desc">Project Description</h2>
-                <p class="text-desc"><b>Daily Catholic Spiritual Companion Mobile app</b> <i> Catholic Mobile app</i></br>
-                <i>In our continuous journey of making the World of God viral for the Filipino worlwide through creating a global cybercommunity that evangelize and connect people closer to God, we need your time, treasure, and talent in making this vision into reality.</i>
-                </br></br>
-                <b>Features</b></br>
-                One of the Features of the application are:</br>
-                -Offline reading for a Bible Study from Old Testament and New Testament</br>
-                -Bible Study Guide</br>
-                -Catholic 101</br>
-                -Basic Catholic Faith</br>
-                 and more ...and Other Services: Set load wallet THRESHOLD amount so you could replenish your load wallet before it runs out</br>
+        <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.techgenus.almusalita" target="_blank" rel="noopener">
+            <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png">
+        </a>
+    </section>
 
-            </p>
-            <p>
-                </br>Service: <strong><b>Android Mobile Development</b></strong>
-              </br>Client: <strong><b><i>AlmuSalita</i></b></strong>
-                </br>Type: <strong><b>Project Based</b></strong>
-              </br>Development: <strong><b>January 2018 - 2021</b></strong>
+    <!-- Tech Stack -->
+    <section class="tech-stack">
+        <h2>Tech Stack</h2>
+        <div class="stack-buttons">
+            <span class="stack-item">Android Studio</span>
+            <span class="stack-item">Kotlin</span>
+            <span class="stack-item">Bitbucket</span>
+            <span class="stack-item">REST API</span>
+            <span class="stack-item">PHP / MySQL</span>
+        </div>
+    </section>
 
-              <!-- Links -->
-                </br><a href="https://play.google.com/store/apps/details?id=com.techgenus.almusalita" target ="blank" >
-                    <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' style="width:20%; height:5%;"/>
-                  </a>
-                </br>
-            </p>
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <h2>Related Projects</h2>
+        <div class="related-grid">
+            <a href="kapartner-app-smart.html"><div class="related-item"><img src="images/proj-logo/ic_kapartner.png" alt="Ka-Partner App"><p>Ka-Partner App</p></div></a>
+            <a href="#"><div class="related-item"><img src="images/notavail.jpg" alt=""><p>Project Two</p></div></a>
+            <a href="#"><div class="related-item"><img src="images/notavail.jpg" alt=""><p>Project Three</p></div></a>
+            <a href="#"><div class="related-item"><img src="images/notavail.jpg" alt=""><p>Project Four</p></div></a>
+        </div>
+    </section>
 
-          </section>
+</main>
 
-          <!-- Tech Stack -->
-          <section class="tech-stack">
-            </br><h2 class="text-desc">Tech Stack</h2>
-            <div class="stack-buttons">
-              <span class="stack-item">Android Studio</span>
-              <span class="stack-item">Kotlin</span>
-              <span class="stack-item">Bitbucket</span>
-              <span class="stack-item">Rest API</span>
-              <span class="stack-item">PHP Mysql</span>
-            </div>
-          </section>
+<footer id="contact" class="fade-in">
+    <div>
+        <h4>Email</h4>
+        <p><a href="mailto:contact@jpgrabs.com">contact@jpgrabs.com</a></p>
+    </div>
+    <div>
+        <h4>Follow Me</h4>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div>
+        <h4>Info</h4>
+        <p><a href="#">Privacy Policy</a> &middot; <a href="#">Terms &amp; Conditions</a></p>
+    </div>
+</footer>
 
-          <!-- Links -->
-          <!-- <section class="project-links">
-            </br><h2 class="text-desc">Links</h2>
-            <a href="#" target="_blank" class="btn-link">View Live</a>
-            <a href="#" target="_blank" class="btn-link">GitHub Repo</a>
-          </section> -->
+<button id="backToTop" aria-label="Back to top">↑</button>
 
-          <!-- Related Projects -->
-          <section class="related-projects">
-            </br><h2 class="text-desc">Related Projects</h2>
-            <div class="related-grid">
-              <a href="kapartner-app-smart.html"><div class="related-item"><img src="images/proj-logo/ic_kapartner.png" alt=""><p style="text-align:center;">Ka-Partner App</p></div></a>
-              <a href="#"><div class="related-item"><img src="images/notavail.jpg" alt=""><p style="text-align:center;">Project Two</p></div></a>
-              <a href="#"><div class="related-item"><img src="images/notavail.jpg" alt=""><p style="text-align:center;">Project Three</p></div></a>
-              <a href="#"><div class="related-item"><img src="images/notavail.jpg" alt=""><p style="text-align:center;">Project Four</p></div></a>
-            </div>
-          </section>
-    </main>
-  </br></br>
-    <!-- Footer -->
-      <footer id="contact" class="fade-in">
-              <div>
-                  <h4>Email</h4>
-                  <p>contact@jpgrabs.com</p>
-              </div>
-              <div>
-                  <h4>Follow Me</h4>
-                  <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                  </div>
-              </div>
-              <div>
-                  <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
-              </div>
-      </footer>
-
-      <!-- Back to Top Button -->
-      <button id="backToTop">↑</button>
-  </body>
-  </html>
+</body>
+</html>
