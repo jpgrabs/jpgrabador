@@ -61,38 +61,27 @@
         <p class="project-sub">Reference, on and offline</p>
     </header>
 
-    <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Project screenshots">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
-        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
-        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
-        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+    <section class="screen-stage" aria-label="Project screenshots">
+      <div class="screen-stage__hint" aria-hidden="true">
+        <span>Scroll</span>
+        <svg width="32" height="10" viewBox="0 0 32 10" fill="none"><path d="M0 5h28m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active"><img src="images/slider/olfu/scolfu1.png" class="d-block w-100" alt="OLFU Student Handbook screenshot 1" loading="lazy"></div>
-        <div class="carousel-item"><img src="images/slider/olfu/scolfu10.png" class="d-block w-100" alt="OLFU Student Handbook screenshot 2" loading="lazy"></div>
-        <div class="carousel-item"><img src="images/slider/olfu/scolfu2.png" class="d-block w-100" alt="OLFU Student Handbook screenshot 3" loading="lazy"></div>
-        <div class="carousel-item"><img src="images/slider/olfu/scolfu3.png" class="d-block w-100" alt="OLFU Student Handbook screenshot 4" loading="lazy"></div>
-        <div class="carousel-item"><img src="images/slider/olfu/scolfu4.png" class="d-block w-100" alt="OLFU Student Handbook screenshot 5" loading="lazy"></div>
-        <div class="carousel-item"><img src="images/slider/olfu/scolfu5.png" class="d-block w-100" alt="OLFU Student Handbook screenshot 6" loading="lazy"></div>
-        <div class="carousel-item"><img src="images/slider/olfu/scolfu6.png" class="d-block w-100" alt="OLFU Student Handbook screenshot 7" loading="lazy"></div>
-        <div class="carousel-item"><img src="images/slider/olfu/scolfu7.png" class="d-block w-100" alt="OLFU Student Handbook screenshot 8" loading="lazy"></div>
-        <div class="carousel-item"><img src="images/slider/olfu/scolfu8.png" class="d-block w-100" alt="OLFU Student Handbook screenshot 9" loading="lazy"></div>
-        <div class="carousel-item"><img src="images/slider/olfu/scolfu9.png" class="d-block w-100" alt="OLFU Student Handbook screenshot 10" loading="lazy"></div>
+      <div class="screen-stage__track" tabindex="0">
+        <figure class="screen-frame" data-index="0"><img src="images/slider/olfu/scolfu1.png" alt="OLFU Student Handbook screenshot 1" loading="lazy"><figcaption>Screen 01</figcaption></figure>
+        <figure class="screen-frame" data-index="1"><img src="images/slider/olfu/scolfu10.png" alt="OLFU Student Handbook screenshot 2" loading="lazy"><figcaption>Screen 02</figcaption></figure>
+        <figure class="screen-frame" data-index="2"><img src="images/slider/olfu/scolfu2.png" alt="OLFU Student Handbook screenshot 3" loading="lazy"><figcaption>Screen 03</figcaption></figure>
+        <figure class="screen-frame" data-index="3"><img src="images/slider/olfu/scolfu3.png" alt="OLFU Student Handbook screenshot 4" loading="lazy"><figcaption>Screen 04</figcaption></figure>
+        <figure class="screen-frame" data-index="4"><img src="images/slider/olfu/scolfu4.png" alt="OLFU Student Handbook screenshot 5" loading="lazy"><figcaption>Screen 05</figcaption></figure>
+        <figure class="screen-frame" data-index="5"><img src="images/slider/olfu/scolfu5.png" alt="OLFU Student Handbook screenshot 6" loading="lazy"><figcaption>Screen 06</figcaption></figure>
+        <figure class="screen-frame" data-index="6"><img src="images/slider/olfu/scolfu6.png" alt="OLFU Student Handbook screenshot 7" loading="lazy"><figcaption>Screen 07</figcaption></figure>
+        <figure class="screen-frame" data-index="7"><img src="images/slider/olfu/scolfu7.png" alt="OLFU Student Handbook screenshot 8" loading="lazy"><figcaption>Screen 08</figcaption></figure>
+        <figure class="screen-frame" data-index="8"><img src="images/slider/olfu/scolfu8.png" alt="OLFU Student Handbook screenshot 9" loading="lazy"><figcaption>Screen 09</figcaption></figure>
+        <figure class="screen-frame" data-index="9"><img src="images/slider/olfu/scolfu9.png" alt="OLFU Student Handbook screenshot 10" loading="lazy"><figcaption>Screen 10</figcaption></figure>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
-      </button>
-    </div>
+      <div class="screen-stage__count" aria-hidden="true">
+        <span>10</span><em>screens</em>
+      </div>
+    </section>
 
     <dl class="project-meta">
         <div><dt>Service</dt><dd>Android Mobile Development</dd></div>
