@@ -210,18 +210,177 @@ document.addEventListener("DOMContentLoaded", () => {
         </svg>
       </button>
       <figure class="screen-lightbox__stage">
-        <img class="screen-lightbox__img" src="" alt="">
+        <div class="screen-lightbox__imgwrap" tabindex="0">
+          <img class="screen-lightbox__img" src="" alt="" draggable="false">
+        </div>
         <figcaption class="screen-lightbox__caption">
           <span class="screen-lightbox__counter"></span>
           <span class="screen-lightbox__label"></span>
+          <span class="screen-lightbox__zoom">
+            <button type="button" class="screen-lightbox__zoom-out"  aria-label="Zoom out">−</button>
+            <span class="screen-lightbox__zoom-level">100%</span>
+            <button type="button" class="screen-lightbox__zoom-in"   aria-label="Zoom in">+</button>
+            <button type="button" class="screen-lightbox__zoom-reset" aria-label="Reset zoom">⤾</button>
+          </span>
         </figcaption>
       </figure>
     `;
     document.body.appendChild(lb);
 
+    const wrapEl    = lb.querySelector('.screen-lightbox__imgwrap');
     const imgEl     = lb.querySelector('.screen-lightbox__img');
     const counterEl = lb.querySelector('.screen-lightbox__counter');
     const labelEl   = lb.querySelector('.screen-lightbox__label');
+    const zoomLvlEl = lb.querySelector('.screen-lightbox__zoom-level');
+    const zoomInBtn = lb.querySelector('.screen-lightbox__zoom-in');
+    const zoomOutBtn= lb.querySelector('.screen-lightbox__zoom-out');
+    const zoomRstBtn= lb.querySelector('.screen-lightbox__zoom-reset');
+
+    /* ---------- Zoom + Pan state ---------- */
+    const MIN_ZOOM = 1, MAX_ZOOM = 5;
+    let scale = 1, tx = 0, ty = 0;
+
+    function applyTransform() {
+      imgEl.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+      zoomLvlEl.textContent = `${Math.round(scale * 100)}%`;
+      const zoomed = scale > 1.001;
+      wrapEl.classList.toggle('is-zoomed', zoomed);
+      zoomOutBtn.disabled  = scale <= MIN_ZOOM + 0.001;
+      zoomInBtn.disabled   = scale >= MAX_ZOOM - 0.001;
+      zoomRstBtn.disabled  = !zoomed;
+    }
+
+    function clampPan() {
+      // Keep image within wrapper bounds
+      const wr = wrapEl.getBoundingClientRect();
+      const iw = imgEl.naturalWidth || imgEl.offsetWidth;
+      const ih = imgEl.naturalHeight || imgEl.offsetHeight;
+      if (!iw || !ih) return;
+      const baseW = imgEl.offsetWidth;
+      const baseH = imgEl.offsetHeight;
+      const scaledW = baseW * scale;
+      const scaledH = baseH * scale;
+      const maxX = Math.max(0, (scaledW - wr.width)  / 2);
+      const maxY = Math.max(0, (scaledH - wr.height) / 2);
+      tx = Math.max(-maxX, Math.min(maxX, tx));
+      ty = Math.max(-maxY, Math.min(maxY, ty));
+    }
+
+    function resetTransform() {
+      scale = 1; tx = 0; ty = 0;
+      applyTransform();
+      imgEl.style.transformOrigin = '0 0';
+      // Center via flexbox alignment (transform-origin from top-left, but
+      // since we use translate, simply zero-out and the flex centers it).
+    }
+
+    function zoomTo(target, cx, cy) {
+      const old = scale;
+      const next = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, target));
+      if (next === old) return;
+      // Zoom towards (cx, cy) relative to the wrapper center.
+      const wr = wrapEl.getBoundingClientRect();
+      const px = (cx ?? wr.left + wr.width / 2) - wr.left - wr.width / 2;
+      const py = (cy ?? wr.top + wr.height / 2) - wr.top - wr.height / 2;
+      // Pre-zoom offset that keeps (px, py) under the cursor
+      tx = (tx - px) * (next / old) + px;
+      ty = (ty - py) * (next / old) + py;
+      scale = next;
+      clampPan();
+      applyTransform();
+    }
+
+    /* ---------- Wire up zoom buttons ---------- */
+    zoomInBtn.addEventListener('click',  (e) => { e.stopPropagation(); zoomTo(scale + 0.5); });
+    zoomOutBtn.addEventListener('click', (e) => { e.stopPropagation(); zoomTo(scale - 0.5); });
+    zoomRstBtn.addEventListener('click', (e) => { e.stopPropagation(); resetTransform(); });
+
+    /* ---------- Wheel zoom ---------- */
+    wrapEl.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const delta = -e.deltaY * 0.002;
+      const target = scale * (1 + delta * 2);
+      zoomTo(target, e.clientX, e.clientY);
+    }, { passive: false });
+
+    /* ---------- Click toggle zoom (only for single-pointer, no drag) ---------- */
+    let clickStart = null;
+    wrapEl.addEventListener('pointerdown', (e) => { clickStart = { x: e.clientX, y: e.clientY }; });
+
+    /* ---------- Drag-to-pan + pinch-to-zoom ---------- */
+    const pointers = new Map();
+    let lastPinchDist = 0, lastTx = 0, lastTy = 0, panFrom = null;
+
+    function dist(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
+    function mid (a, b) { return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }; }
+
+    wrapEl.addEventListener('pointerdown', (e) => {
+      wrapEl.setPointerCapture(e.pointerId);
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pointers.size === 1 && scale > 1) {
+        panFrom = { x: e.clientX, y: e.clientY };
+        lastTx = tx; lastTy = ty;
+        wrapEl.classList.add('is-panning');
+      } else if (pointers.size === 2) {
+        const [a, b] = [...pointers.values()];
+        lastPinchDist = dist(a, b);
+        wrapEl.classList.add('is-pinching');
+      }
+    });
+
+    wrapEl.addEventListener('pointermove', (e) => {
+      if (!pointers.has(e.pointerId)) return;
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pointers.size === 2) {
+        const [a, b] = [...pointers.values()];
+        const d = dist(a, b);
+        const m = mid(a, b);
+        const ratio = d / (lastPinchDist || d);
+        zoomTo(scale * ratio, m.x, m.y);
+        lastPinchDist = d;
+      } else if (pointers.size === 1 && panFrom && scale > 1) {
+        tx = lastTx + (e.clientX - panFrom.x);
+        ty = lastTy + (e.clientY - panFrom.y);
+        clampPan();
+        applyTransform();
+      }
+    });
+
+    function endPointer(e) {
+      pointers.delete(e.pointerId);
+      if (pointers.size < 2) {
+        wrapEl.classList.remove('is-pinching');
+        lastPinchDist = 0;
+      }
+      if (pointers.size === 0) {
+        wrapEl.classList.remove('is-panning');
+        // Detect tap (no movement) → toggle click-to-zoom
+        if (clickStart) {
+          const dx = e.clientX - clickStart.x;
+          const dy = e.clientY - clickStart.y;
+          if (Math.hypot(dx, dy) < 6) {
+            if (scale > 1.01) resetTransform();
+            else zoomTo(2.4, e.clientX, e.clientY);
+          }
+        }
+        clickStart = null;
+        panFrom = null;
+      }
+    }
+    wrapEl.addEventListener('pointerup', endPointer);
+    wrapEl.addEventListener('pointercancel', endPointer);
+
+    /* ---------- Double-tap on touch to toggle zoom ---------- */
+    let lastTap = 0;
+    wrapEl.addEventListener('pointerup', (e) => {
+      if (e.pointerType !== 'touch') return;
+      const now = Date.now();
+      if (now - lastTap < 300) {
+        if (scale > 1.01) resetTransform();
+        else zoomTo(2.4, e.clientX, e.clientY);
+      }
+      lastTap = now;
+    });
 
     let frames = [];
     let index  = 0;
@@ -237,6 +396,8 @@ document.addEventListener("DOMContentLoaded", () => {
       imgEl.alt = f.alt;
       counterEl.textContent = `${pad2(index + 1)} / ${pad2(frames.length)}`;
       labelEl.textContent = f.caption || '';
+      // Always start a slide at 1:1 zoom, centered.
+      resetTransform();
     }
 
     function open(fromImg) {
@@ -256,22 +417,8 @@ document.addEventListener("DOMContentLoaded", () => {
       setSlide(index);
 
       lb.hidden = false;
-      // Force reflow so transition runs.
       void lb.offsetWidth;
       lb.classList.add('is-open');
-
-      // Pop-from-origin: position img where the source was, then animate to center.
-      const stageImg = lb.querySelector('.screen-lightbox__img');
-      const targetW = Math.min(window.innerWidth * 0.5, 420);
-      const scale  = originRect.width / targetW;
-      stageImg.style.transformOrigin = 'center center';
-      stageImg.style.transform = `translate(${originRect.left + originRect.width/2 - window.innerWidth/2}px, ${originRect.top + originRect.height/2 - window.innerHeight/2}px) scale(${scale})`;
-      stageImg.style.transition = 'none';
-      // Next frame: animate in.
-      requestAnimationFrame(() => {
-        stageImg.style.transition = '';
-        stageImg.style.transform  = '';
-      });
 
       document.body.style.overflow = 'hidden';
       lb.querySelector('.screen-lightbox__close').focus({ preventScroll: true });
@@ -315,17 +462,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener('keydown', (e) => {
       if (lb.hidden) return;
-      if (e.key === 'Escape')      close();
-      if (e.key === 'ArrowRight')  setSlide(index + 1);
-      if (e.key === 'ArrowLeft')   setSlide(index - 1);
+      if (e.key === 'Escape')                 { close(); return; }
+      if (e.key === 'ArrowRight')             { setSlide(index + 1); return; }
+      if (e.key === 'ArrowLeft')              { setSlide(index - 1); return; }
+      if (e.key === '+' || e.key === '=')     { zoomTo(scale + 0.5); return; }
+      if (e.key === '-' || e.key === '_')     { zoomTo(scale - 0.5); return; }
+      if (e.key === '0')                      { resetTransform(); return; }
     });
 
-    // Touch swipe support inside the lightbox.
-    let touchStartX = 0;
-    lb.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    lb.addEventListener('touchend',   (e) => {
+    // Touch swipe to navigate slides — only when NOT zoomed (so pan still works).
+    let touchStartX = 0, touchStartY = 0;
+    lb.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+    lb.addEventListener('touchend', (e) => {
+      if (scale > 1.01) return;            // ignore while zoomed (panning takes priority)
+      if (e.touches.length > 0) return;     // multi-touch (pinch) — ignore
       const dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 40) setSlide(index + (dx < 0 ? 1 : -1));
+      const dy = e.changedTouches[0].clientY - touchStartY;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+        setSlide(index + (dx < 0 ? 1 : -1));
+      }
     });
   })();
 
